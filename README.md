@@ -44,4 +44,6 @@ You can then execute your native executable with: `./target/opencertificate-api-
 If you want to learn more about building native executables, please consult https://quarkus.io/guides/maven-tooling.html.
 
 ## Code style
-This project uses checkstyle plugin in maven to mantain the default code style. See more in [project site](https://checkstyle.sourceforge.io/).
+This project uses checkstyle [plugin in maven](http://maven.apache.org/plugins/maven-checkstyle-plugin/usage.html) to mantain the default code style. See more in [project site](https://checkstyle.sourceforge.io/).
+
+O plugin foi configurado para bloquear build com erros de estilo em código.
