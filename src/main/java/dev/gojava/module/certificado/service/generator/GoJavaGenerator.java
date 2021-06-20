@@ -39,141 +39,143 @@ import java.util.List;
 @Default
 public class GoJavaGenerator implements CertificateGenerator {
 
-	@Inject
-	TokenGenerator tokenGenerator;
+    @Inject
+    TokenGenerator tokenGenerator;
 
-	@Override
-	public List<Certificate> generateCertificates(CertificatorGeneratorCommand command) {
-		List<Certificate> certificateList = new ArrayList<>();
+    @Override
+    public List<Certificate> generateCertificates(CertificatorGeneratorCommand command) {
+        List<Certificate> certificateList = new ArrayList<>();
 
-		List<Participant> participantList = command.getParticipantList();
+        List<Participant> participantList = command.getParticipantList();
 
-		for (Participant participant : participantList) {
-			Certificate certificate = new Certificate();
-			certificate.setParticipant(participant);
+        for (Participant participant : participantList) {
+            Certificate certificate = new Certificate();
+            certificate.setParticipant(participant);
 
-			certificate.setFileName(createCertName(participant));
-			certificate.setFileExtension("pdf");
-			certificate.setUuid(tokenGenerator.generateToken(certificate));
-			certificate.setFileContent(buildPdfFileContent(certificate, command));
+            certificate.setFileName(createCertName(participant));
+            certificate.setFileExtension("pdf");
+            certificate.setUuid(tokenGenerator.generateToken(certificate));
+            certificate.setFileContent(buildPdfFileContent(certificate, command));
 
-			certificateList.add(certificate);
-		}
+            certificateList.add(certificate);
+        }
 
-		return certificateList;
-	}
+        return certificateList;
+    }
 
-	private byte[] buildPdfFileContent(Certificate certificate, CertificatorGeneratorCommand command) {
-		FileOutputStream fileOutputStream = null;
-		Document document = null;
+    private byte[] buildPdfFileContent(Certificate certificate, CertificatorGeneratorCommand command) {
+        FileOutputStream fileOutputStream = null;
+        Document document = null;
 
-		try {
-			File certificateTemp = File.createTempFile("certificateTemp_", ".pdf");
-			fileOutputStream = new FileOutputStream(certificateTemp);
+        try {
+            File certificateTemp = File.createTempFile("certificateTemp_", ".pdf");
+            fileOutputStream = new FileOutputStream(certificateTemp);
 
-			document = new Document(PageSize.A4.rotate());
-			PdfWriter writer = PdfWriter.getInstance(document, fileOutputStream);
-			document.open();
+            document = new Document(PageSize.A4.rotate());
+            PdfWriter writer = PdfWriter.getInstance(document, fileOutputStream);
+            document.open();
 
-			ColumnText ct = new ColumnText(writer.getDirectContent());
-			ct.setSimpleColumn(75, 200, 775, 480);
+            ColumnText ct = new ColumnText(writer.getDirectContent());
+            ct.setSimpleColumn(75, 200, 775, 480);
 
-			Font paragraphFont = createFontToCertText();
-			Paragraph paragraph = createParagraphToCertText(certificate, paragraphFont);
-			ct.addElement(paragraph);
-			ct.go();
+            Font paragraphFont = createFontToCertText();
+            Paragraph paragraph = createParagraphToCertText(certificate, paragraphFont);
+            ct.addElement(paragraph);
+            ct.go();
 
-			addBackgroundImage(writer.getDirectContentUnder(), command);
+            addBackgroundImage(writer.getDirectContentUnder(), command);
 
-			document.close();
-			certificateTemp.deleteOnExit();
+            document.close();
+            certificateTemp.deleteOnExit();
 
-			return FileUtils.readFileToByteArray(certificateTemp);
-		} catch (IOException | DocumentException | URISyntaxException e) {
-			e.printStackTrace();
-		} finally {
-			if (document != null) {
-				document.close();
-			}
-			StreamHelper.closeSafeOutput(fileOutputStream);
-		}
+            return FileUtils.readFileToByteArray(certificateTemp);
+        } catch (IOException | DocumentException | URISyntaxException e) {
+            e.printStackTrace();
+        } finally {
+            if (document != null) {
+                document.close();
+            }
+            StreamHelper.closeSafeOutput(fileOutputStream);
+        }
 
-		return null;
-	}
+        return null;
+    }
 
-	private void addBackgroundImage(PdfContentByte background, CertificatorGeneratorCommand command) throws IOException, URISyntaxException, DocumentException {
-		String backgroundFileName = command.getBackgroundFileName();
+    private void addBackgroundImage(PdfContentByte background, CertificatorGeneratorCommand command) throws IOException, URISyntaxException, DocumentException {
+        String backgroundFileName = command.getBackgroundFileName();
 
-		URL backgroundUrl = getClass().getResource("/img/gojava_certificado-2-0-0.png").toURI().toURL();
-		if (FileHelper.isValidFile(backgroundFileName)) {
-			backgroundUrl = new File(backgroundFileName).toURI().toURL();
-		}
+        URL backgroundUrl = getClass().getResource("/img/gojava_certificado-2-0-0.png").toURI().toURL();
+        if (FileHelper.isValidFile(backgroundFileName)) {
+            backgroundUrl = new File(backgroundFileName).toURI().toURL();
+        }
 
-		Image image = Image.getInstance(backgroundUrl);
-		image.setAbsolutePosition(0, 0);
-		image.scaleAbsolute(PageSize.A4.rotate());
-		background.saveState();
-		PdfGState pdfGState = new PdfGState();
-		pdfGState.setFillOpacity(0.8f);
-		background.setGState(pdfGState);
-		background.addImage(image);
-		background.restoreState();
-	}
+        Image image = Image.getInstance(backgroundUrl);
+        image.setAbsolutePosition(0, 0);
+        image.scaleAbsolute(PageSize.A4.rotate());
+        background.saveState();
+        PdfGState pdfGState = new PdfGState();
+        pdfGState.setFillOpacity(0.8f);
+        background.setGState(pdfGState);
+        background.addImage(image);
+        background.restoreState();
+    }
 
-	private Paragraph createParagraphToCertText(Certificate certificate, Font paragraphFont) {
-		Paragraph paragraph = new Paragraph();
-		paragraph.setLeading(0f, 1.1f);
-		paragraph.setAlignment(Paragraph.ALIGN_JUSTIFIED);
-		paragraph.setFont(paragraphFont);
-		paragraph.add(generateCertificateText(certificate));
-		return paragraph;
-	}
+    private Paragraph createParagraphToCertText(Certificate certificate, Font paragraphFont) {
+        Paragraph paragraph = new Paragraph();
+        paragraph.setLeading(0f, 1.1f);
+        paragraph.setAlignment(Paragraph.ALIGN_JUSTIFIED);
+        paragraph.setFont(paragraphFont);
+        paragraph.add(generateCertificateText(certificate));
+        return paragraph;
+    }
 
-	private Font createFontToCertText() {
-		Font paragraphFont = new Font();
-		paragraphFont.setSize(24);
-		paragraphFont.setColor(BaseColor.WHITE);
-		paragraphFont.setFamily(BaseFont.TIMES_ROMAN);
-		paragraphFont.setStyle(Font.NORMAL);
-		return paragraphFont;
-	}
+    private Font createFontToCertText() {
+        Font paragraphFont = new Font();
+        paragraphFont.setSize(24);
+        paragraphFont.setColor(BaseColor.WHITE);
+        paragraphFont.setFamily(BaseFont.TIMES_ROMAN);
+        paragraphFont.setStyle(Font.NORMAL);
+        return paragraphFont;
+    }
 
-	private String generateCertificateText(Certificate certificate) {
-		String finalText = "Certificamos que NOME_PARTICIPANTE com TIPO_IDENTIFICACAO IDENTIFICACAO_PARTICIPANTE participou do evento NOME_EVENTO durante HORAS_EVENTO horas no dia DATA_EVENTO promovido pelo Gojava - Grupo de usuários Java de Goiás. O evento foi sobre ASSUNTO_EVENTO. Valide seu certificado em gojava.dev com o token de validação: VALIDATOR_UUID";
-		Participant participant = certificate.getParticipant();
-		finalText = finalText.replaceAll("NOME_PARTICIPANTE", ParticipantUtil.participantCompleteName(participant).toUpperCase());
-		if (participant.getCpf() != null) {
-			finalText = finalText.replaceAll("TIPO_IDENTIFICACAO", "CPF");
-			finalText = finalText.replaceAll("IDENTIFICACAO_PARTICIPANTE", participant.getCpf());
-		} else {
-			finalText = finalText.replaceAll("TIPO_IDENTIFICACAO", "RG");
-			finalText = finalText.replaceAll("IDENTIFICACAO_PARTICIPANTE", participant.getRg());
-		}
-		finalText = finalText.replaceAll("NOME_EVENTO", participant.getEvent().getName());
-		finalText = finalText.replaceAll("HORAS_EVENTO", participant.getHour());
+    private String generateCertificateText(Certificate certificate) {
+        String finalText = "Certificamos que NOME_PARTICIPANTE com TIPO_IDENTIFICACAO IDENTIFICACAO_PARTICIPANTE participou do evento NOME_EVENTO durante HORAS_EVENTO horas no "
+                + "dia DATA_EVENTO promovido pelo Gojava - Grupo de usuários Java de Goiás. O evento foi sobre ASSUNTO_EVENTO. Valide seu certificado em gojava.dev com o token "
+                + "de validação: VALIDATOR_UUID";
+        Participant participant = certificate.getParticipant();
+        finalText = finalText.replaceAll("NOME_PARTICIPANTE", ParticipantUtil.participantCompleteName(participant).toUpperCase());
+        if (participant.getCpf() != null) {
+            finalText = finalText.replaceAll("TIPO_IDENTIFICACAO", "CPF");
+            finalText = finalText.replaceAll("IDENTIFICACAO_PARTICIPANTE", participant.getCpf());
+        } else {
+            finalText = finalText.replaceAll("TIPO_IDENTIFICACAO", "RG");
+            finalText = finalText.replaceAll("IDENTIFICACAO_PARTICIPANTE", participant.getRg());
+        }
+        finalText = finalText.replaceAll("NOME_EVENTO", participant.getEvent().getName());
+        finalText = finalText.replaceAll("HORAS_EVENTO", participant.getHour());
 
-		Date dateStarted = participant.getEvent().getDateStarted();
-		Date dateEnded = participant.getEvent().getDateEnded();
-		if (dateEnded != null && !dateEnded.equals(dateStarted)) {
-			String dateStartedString = DateHelper.format(dateStarted, DateFormat.SHORT);
-			String dateEndedString = DateHelper.format(dateEnded, DateFormat.SHORT);
-			finalText = finalText.replaceAll("DATA_EVENTO", String.format("%s - %s", dateStartedString, dateEndedString));
-		} else {
-			finalText = finalText.replaceAll("DATA_EVENTO", DateHelper.format(dateStarted, DateFormat.SHORT));
-		}
+        Date dateStarted = participant.getEvent().getDateStarted();
+        Date dateEnded = participant.getEvent().getDateEnded();
+        if (dateEnded != null && !dateEnded.equals(dateStarted)) {
+            String dateStartedString = DateHelper.format(dateStarted, DateFormat.SHORT);
+            String dateEndedString = DateHelper.format(dateEnded, DateFormat.SHORT);
+            finalText = finalText.replaceAll("DATA_EVENTO", String.format("%s - %s", dateStartedString, dateEndedString));
+        } else {
+            finalText = finalText.replaceAll("DATA_EVENTO", DateHelper.format(dateStarted, DateFormat.SHORT));
+        }
 
-		finalText = finalText.replaceAll("ASSUNTO_EVENTO", participant.getEvent().getTalkerTopics());
-		finalText = finalText.replaceAll("VALIDATOR_UUID", certificate.getUuid());
+        finalText = finalText.replaceAll("ASSUNTO_EVENTO", participant.getEvent().getTalkerTopics());
+        finalText = finalText.replaceAll("VALIDATOR_UUID", certificate.getUuid());
 
-		return finalText;
-	}
+        return finalText;
+    }
 
-	private String createCertName(Participant participant) {
-		String identy = participant.getCpf();
-		if (identy == null || identy.isEmpty()) {
-			identy = participant.getRg();
-		}
+    private String createCertName(Participant participant) {
+        String identy = participant.getCpf();
+        if (identy == null || identy.isEmpty()) {
+            identy = participant.getRg();
+        }
 
-		return "certificado_" + identy;
-	}
+        return "certificado_" + identy;
+    }
 }

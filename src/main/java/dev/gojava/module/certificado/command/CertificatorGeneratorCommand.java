@@ -6,22 +6,22 @@ import java.util.List;
 
 public class CertificatorGeneratorCommand {
 
-	private List<Participant> participantList;
-	private String backgroundFileName;
+    private List<Participant> participantList;
+    private String backgroundFileName;
 
-	public List<Participant> getParticipantList() {
-		return participantList;
-	}
+    public List<Participant> getParticipantList() {
+        return participantList;
+    }
 
-	public void setParticipantList(List<Participant> participantList) {
-		this.participantList = participantList;
-	}
+    public void setParticipantList(List<Participant> participantList) {
+        this.participantList = participantList;
+    }
 
-	public String getBackgroundFileName() {
-		return backgroundFileName;
-	}
+    public String getBackgroundFileName() {
+        return backgroundFileName;
+    }
 
-	public void setBackgroundFileName(String backgroundFileName) {
-		this.backgroundFileName = backgroundFileName;
-	}
+    public void setBackgroundFileName(String backgroundFileName) {
+        this.backgroundFileName = backgroundFileName;
+    }
 }
