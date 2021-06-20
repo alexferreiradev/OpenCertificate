@@ -9,8 +9,8 @@ import javax.enterprise.inject.spi.InjectionPoint;
 
 public class LoggerProducer {
 
-	@Produces
-	public Logger getLoggerSLF4J(InjectionPoint bean) {
-		return LoggerFactory.getLogger(bean.getClass());
-	}
+    @Produces
+    public Logger getLoggerSLF4J(InjectionPoint bean) {
+        return LoggerFactory.getLogger(bean.getClass());
+    }
 }

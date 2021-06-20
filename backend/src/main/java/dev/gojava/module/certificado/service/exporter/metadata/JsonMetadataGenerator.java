@@ -19,45 +19,45 @@ import java.util.List;
 @ApplicationScoped
 public class JsonMetadataGenerator implements MetadataGenerator {
 
-	@Override
-	public byte[] createMetadataBytes(List<Certificate> certificateList) {
-		JsonMetadata jsonMetadata = new JsonMetadata();
-		// TODO - adicionar em validador primeiro
-		jsonMetadata.setIntegrityKey("");
-		List<CertificateMetadata> certificatesMetadata = new ArrayList<>();
-		certificateList.forEach(certificate -> {
-			CertificateMetadata certificateData = new CertificateMetadata();
-			certificateData.setToken(certificate.getUuid());
-			ParticipantMetadata participantData = new ParticipantMetadata();
-			Participant participant = certificate.getParticipant();
-			participantData.setIdentifier(ParticipantUtil.createIdentifier(participant));
-			participantData.setName(ParticipantUtil.participantCompleteName(participant));
-			certificateData.setParticipant(participantData);
+    @Override
+    public byte[] createMetadataBytes(List<Certificate> certificateList) {
+        JsonMetadata jsonMetadata = new JsonMetadata();
+        // TODO - adicionar em validador primeiro
+        jsonMetadata.setIntegrityKey("");
+        List<CertificateMetadata> certificatesMetadata = new ArrayList<>();
+        certificateList.forEach(certificate -> {
+            CertificateMetadata certificateData = new CertificateMetadata();
+            certificateData.setToken(certificate.getUuid());
+            ParticipantMetadata participantData = new ParticipantMetadata();
+            Participant participant = certificate.getParticipant();
+            participantData.setIdentifier(ParticipantUtil.createIdentifier(participant));
+            participantData.setName(ParticipantUtil.participantCompleteName(participant));
+            certificateData.setParticipant(participantData);
 
-			certificatesMetadata.add(certificateData);
-		});
-		jsonMetadata.setCertificates(certificatesMetadata);
+            certificatesMetadata.add(certificateData);
+        });
+        jsonMetadata.setCertificates(certificatesMetadata);
 
-		String json = new Gson().toJson(jsonMetadata);
-		return json.getBytes();
-	}
+        String json = new Gson().toJson(jsonMetadata);
+        return json.getBytes();
+    }
 
-	/**
-	 * Cria o nome de arquivo utilizado pelo validador. Ao alterar, altere no validador.
-	 *
-	 * @param certificate model
-	 * @return nome de arquivo json valido
-	 */
-	@Override
-	public String getFileName(Certificate certificate) {
-		Date createdDate = new Date();
-		String createdDateFormat = DateHelper.format(createdDate, DateFormat.SHORT);
-		String eventName = certificate.getParticipant().getEvent().getName();
-		String eventExecutor = certificate.getParticipant().getEvent().getExecutor();
+    /**
+     * Cria o nome de arquivo utilizado pelo validador. Ao alterar, altere no validador.
+     *
+     * @param certificate model
+     * @return nome de arquivo json valido
+     */
+    @Override
+    public String getFileName(Certificate certificate) {
+        Date createdDate = new Date();
+        String createdDateFormat = DateHelper.format(createdDate, DateFormat.SHORT);
+        String eventName = certificate.getParticipant().getEvent().getName();
+        String eventExecutor = certificate.getParticipant().getEvent().getExecutor();
 
-		eventName = FileHelper.formatToValidFileName(eventName);
-		createdDateFormat = FileHelper.formatToValidFileName(createdDateFormat);
+        eventName = FileHelper.formatToValidFileName(eventName);
+        createdDateFormat = FileHelper.formatToValidFileName(createdDateFormat);
 
-		return String.format("%s_%s_%s.json", eventName, eventExecutor, createdDateFormat);
-	}
+        return String.format("%s_%s_%s.json", eventName, eventExecutor, createdDateFormat);
+    }
 }
