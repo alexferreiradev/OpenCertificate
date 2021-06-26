@@ -6,6 +6,7 @@ import dev.gojava.module.certificado.command.ReaderCommand;
 import dev.gojava.module.certificado.model.Event;
 import dev.gojava.module.certificado.model.Participant;
 
+import javax.enterprise.context.ApplicationScoped;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -16,6 +17,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.StringTokenizer;
 
+@ApplicationScoped
 public class CsvParticipantReader implements ParticipantsReader {
 
     private static final int NAME_CSV_INDEX = 0;
@@ -28,17 +30,11 @@ public class CsvParticipantReader implements ParticipantsReader {
     private static final int EVENTDATESTARTED_CSV_INDEX = 7;
     private static final int EVENTDATEENDED_CSV_INDEX = 8;
 
-    private String absoluteFilePath;
-
-    public CsvParticipantReader(String absoluteFilePath) {
-        this.absoluteFilePath = absoluteFilePath;
-    }
-
     @Override
     public List<Participant> readParticipant(ReaderCommand command) {
         InputStream inputStream = null;
         try {
-            inputStream = new FileInputStream(new File(absoluteFilePath));
+            inputStream = new FileInputStream(new File(command.absoluteFilePath));
             String text = StreamHelper.parseStream(inputStream);
 
             return buildParticipantList(text);
