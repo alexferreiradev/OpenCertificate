@@ -47,3 +47,17 @@ If you want to learn more about building native executables, please consult http
 This project uses checkstyle [plugin in maven](http://maven.apache.org/plugins/maven-checkstyle-plugin/usage.html) to mantain the default code style. See more in [project site](https://checkstyle.sourceforge.io/).
 
 O plugin foi configurado para bloquear build com erros de estilo em código.
+
+## Ambiente Dev
+O ambiente de dev precisa de um banco de dados instalado. 
+
+### Banco de dados
+Utilizamos o `Postgres no heroku`, então há duas formas de utiliza o postgres, utilizar um servidor em docker ou um
+servidor instalado localmente.
+
+A configuração de banco `padrão é para servidor local`. A configuração com `docker` pode ser feita definindo variáveis de ambiente:
+```
+DATASOURCE_USERNAME=
+DATASOURCE_PASSWORD=
+DATASOURCE_URL=
+```
