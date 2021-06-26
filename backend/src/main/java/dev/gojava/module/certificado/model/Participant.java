@@ -1,15 +1,36 @@
 package dev.gojava.module.certificado.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import java.util.Objects;
 
+@Entity
 public class Participant extends BaseModel {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String name;
     private String lastName;
     private String rg;
     private String cpf;
     private String hour;
+
+    @ManyToOne
+    @JoinColumn(nullable = false)
     private Event event;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -61,25 +82,21 @@ public class Participant extends BaseModel {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
         Participant that = (Participant) o;
-        return Objects.equals(name, that.name) && Objects.equals(lastName, that.lastName) && Objects.equals(rg, that.rg) && Objects.equals(cpf, that.cpf) && Objects.equals(hour,
-                that.hour) && Objects.equals(event, that.event);
+        return Objects.equals(id, that.id) && Objects.equals(name, that.name) && Objects.equals(lastName, that.lastName) && Objects.equals(rg, that.rg) && Objects.equals(cpf,
+                that.cpf) && Objects.equals(hour, that.hour) && Objects.equals(event, that.event);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, lastName, rg, cpf, hour, event);
+        return Objects.hash(id, name, lastName, rg, cpf, hour, event);
     }
 
     @Override
     public String toString() {
-        return "Participant{" + "name='" + name + '\'' + ", lastName='" + lastName + '\'' + ", rg='" + rg + '\'' + ", cpf='" + cpf + '\'' + ", hour='" + hour + '\'' + ", event="
-                + event + '}';
+        return "Participant{" + "id=" + id + ", name='" + name + '\'' + ", lastName='" + lastName + '\'' + ", rg='" + rg + '\'' + ", cpf='" + cpf + '\'' + ", hour='" + hour + '\''
+                + ", event=" + event + '}';
     }
 }
