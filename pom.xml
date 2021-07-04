@@ -9,8 +9,7 @@
   <properties>
     <compiler-plugin.version>3.8.1</compiler-plugin.version>
     <maven.compiler.parameters>true</maven.compiler.parameters>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
+    <maven.compiler.release>11</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <quarkus-plugin.version>1.13.6.Final</quarkus-plugin.version>
@@ -141,6 +140,10 @@
             <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
             <maven.home>${maven.home}</maven.home>
           </systemPropertyVariables>
+          <!-- Configurar reflection no java 11 -->
+          <argLine>
+            --illegal-access=permit
+          </argLine>
         </configuration>
       </plugin>
       <plugin>
@@ -198,6 +201,10 @@
                     <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
                     <maven.home>${maven.home}</maven.home>
                   </systemPropertyVariables>
+                  <!-- Configurar reflection no java 11 -->
+                  <argLine>
+                    --illegal-access=permit
+                  </argLine>
                 </configuration>
               </execution>
             </executions>
