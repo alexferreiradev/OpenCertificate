@@ -4,6 +4,7 @@ import dev.gojava.module.certificado.model.Event;
 
 public class ReaderCommand {
 
-    private Event event;
+    public Event event;
+    public String absoluteFilePath;
 
 }

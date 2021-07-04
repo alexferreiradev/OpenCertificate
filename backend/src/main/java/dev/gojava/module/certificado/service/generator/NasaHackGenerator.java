@@ -20,6 +20,7 @@ import dev.gojava.module.certificado.service.generator.token.TokenGenerator;
 import org.apache.commons.io.FileUtils;
 
 import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.inject.Alternative;
 import javax.inject.Inject;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -29,6 +30,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @ApplicationScoped
+@Alternative
 public class NasaHackGenerator implements CertificateGenerator {
 
     private static final int MAX_NAME_CHARS = 29;
