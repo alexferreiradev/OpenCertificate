@@ -2,6 +2,7 @@ package dev.gojava.core.helper;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.util.zip.ZipFile;
 
 public final class FileHelper {
 
@@ -36,5 +37,17 @@ public final class FileHelper {
         textFormatted = textFormatted.replaceAll("/", "-");
 
         return textFormatted;
+    }
+
+    /**
+     * Calcular tamanho de arquivo zip.
+     *
+     * @param arquivoZIP arquivo zip
+     * @return tamanho de arquivo
+     */
+    public static long tamanhoArquivo(ZipFile arquivoZIP) {
+        if (arquivoZIP == null) return 0;
+
+        return arquivoZIP.size();
     }
 }
