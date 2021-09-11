@@ -46,6 +46,6 @@ public final class CertificateUtilTest {
 
         String resultingFileName = CertificateUtil.createFileName(certificate);
 
-        Assertions.assertEquals(resultingFileName, new StringBuilder(fileName).append(".").append(fileExtension).toString());
+        Assertions.assertEquals(resultingFileName, "filename.fileExtension");
     }
 }
