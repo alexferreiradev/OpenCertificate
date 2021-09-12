@@ -9,6 +9,14 @@ public class CertificatorGeneratorCommand {
     private List<Participant> participantList;
     private String backgroundFileName;
 
+    public static CertificatorGeneratorCommand from(List<Participant> participants, String backgroundFile) {
+        CertificatorGeneratorCommand command = new CertificatorGeneratorCommand();
+        command.setParticipantList(participants);
+        command.setBackgroundFileName(backgroundFile);
+
+        return command;
+    }
+
     public List<Participant> getParticipantList() {
         return participantList;
     }
