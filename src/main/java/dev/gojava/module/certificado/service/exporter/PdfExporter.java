@@ -13,6 +13,7 @@ import javax.inject.Inject;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -71,16 +72,18 @@ public class PdfExporter implements CertificateExporter {
     }
 
     private File exportPDF(Certificate certificate) {
-        File file = new File("./" + CERT_DIR_NAME + "/" + CertificateUtil.createFileName(certificate));
-        try (FileOutputStream fileOutputStream = new FileOutputStream(file)) {
-            createExportDirectory();
-            FileHelper.createFileOrThrow(file.getAbsolutePath(), true);
+        try {
+            File file = Files.createTempFile("certificadoDraft_", CertificateUtil.createFileName(certificate)).toFile();
+            try (FileOutputStream fileOutputStream = new FileOutputStream(file)) {
+                createExportDirectory();
+                FileHelper.createFileOrThrow(file.getAbsolutePath(), true);
 
-            fileOutputStream.write(certificate.getFileContent());
-            fileOutputStream.flush();
+                fileOutputStream.write(certificate.getFileContent());
+                fileOutputStream.flush();
 
-            return file;
-        } catch (IOException e) {
+                return file;
+            }
+        } catch (Exception e) {
             throw new RestApplicationException("Erro de IO ao tentar criar arquivo PDF", e);
         }
     }
