@@ -31,6 +31,7 @@ import java.util.List;
 
 @ApplicationScoped
 @Alternative
+@CertificateGeneratorType(type = GeneratorType.NASAHACK)
 public class NasaHackGenerator implements CertificateGenerator {
 
     private static final int MAX_NAME_CHARS = 29;

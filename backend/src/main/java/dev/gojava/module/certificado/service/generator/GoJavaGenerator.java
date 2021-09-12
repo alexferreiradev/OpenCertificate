@@ -39,6 +39,7 @@ import java.util.List;
 
 @ApplicationScoped
 @Default
+@CertificateGeneratorType(type = GeneratorType.GOJAVA)
 public class GoJavaGenerator implements CertificateGenerator {
 
     @Inject
@@ -80,8 +81,8 @@ public class GoJavaGenerator implements CertificateGenerator {
 
             return certificate;
         } catch (Exception e) {
-            logger.error("Erro ao gerar certificado para participante: {}", ParticipantUtil.createIdentifier(participant));
-            throw new RestApplicationException("Erro ao gerar certificados, consulte o suporte", 500);
+            logger.error("Erro ao gerar certificado para participante: {}", ParticipantUtil.createIdentifier(participant), e);
+            throw new RestApplicationException("Erro ao gerar certificados, consulte o suporte", e, 500);
         }
     }
 
