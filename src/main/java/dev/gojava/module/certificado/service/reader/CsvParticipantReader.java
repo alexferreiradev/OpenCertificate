@@ -1,16 +1,22 @@
 package dev.gojava.module.certificado.service.reader;
 
+import dev.gojava.core.exception.RestApplicationException;
 import dev.gojava.core.helper.DateHelper;
 import dev.gojava.core.helper.StreamHelper;
 import dev.gojava.module.certificado.command.ReaderCommand;
 import dev.gojava.module.certificado.model.Event;
 import dev.gojava.module.certificado.model.Participant;
+import org.slf4j.Logger;
 
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
+import javax.ws.rs.core.Response;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -29,12 +35,32 @@ public class CsvParticipantReader implements ParticipantsReader {
     private static final int EVENTTOPICS_CSV_INDEX = 6;
     private static final int EVENTDATESTARTED_CSV_INDEX = 7;
     private static final int EVENTDATEENDED_CSV_INDEX = 8;
+    private static final int CSV_DEFAULT_BUFFER = 128 * 1024;
+
+    @Inject
+    Logger logger;
+
+    @Override
+    public ReaderCommand createReaderCommandOrThrow(File csvFile) {
+        try {
+            FileInputStream fileInputStream = new FileInputStream(csvFile);
+            File tempFile = File.createTempFile("tempEvento_", ".csv");
+            Files.copy(fileInputStream, tempFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+            ReaderCommand readerCommand = new ReaderCommand();
+            readerCommand.absoluteFilePath = tempFile.getAbsolutePath();
+
+            return readerCommand;
+        } catch (IOException e) {
+            logger.error("Erro ao tentar criar reader", e);
+            throw new RestApplicationException("Não foi possível ler arquivo csv", e, Response.Status.BAD_REQUEST);
+        }
+    }
 
     @Override
     public List<Participant> readParticipant(ReaderCommand command) {
         InputStream inputStream = null;
         try {
-            inputStream = new FileInputStream(new File(command.absoluteFilePath));
+            inputStream = new FileInputStream(command.absoluteFilePath);
             String text = StreamHelper.parseStream(inputStream);
 
             return buildParticipantList(text);
