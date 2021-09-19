@@ -9,6 +9,14 @@ public class CertificatorGeneratorCommand {
     private List<Participant> participantList;
     private String backgroundFileName;
 
+    /**
+     * Cria command de lista de participantes.
+     *
+     * @param participants lista de participantes
+     * @param backgroundFile arquivo de background configurado
+     *
+     * @return command
+     */
     public static CertificatorGeneratorCommand from(List<Participant> participants, String backgroundFile) {
         CertificatorGeneratorCommand command = new CertificatorGeneratorCommand();
         command.setParticipantList(participants);
