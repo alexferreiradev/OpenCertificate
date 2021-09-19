@@ -73,6 +73,8 @@ class CertificadoServiceImplTest {
         MatcherAssert.assertThat(certificadoGeradoDTO.arquivoZIP.getName(), Matchers.endsWith(".zip"));
         MatcherAssert.assertThat(certificadoGeradoDTO.tamanhoZIP, CoreMatchers.is(0L));
         Mockito.verify(repository).persist(listaFakeCertificados);
+        Mockito.verify(logger).info("Iniciando geração de certificado para: {}", command);
+        Mockito.verify(repository).persist(listaFakeCertificados);
     }
 
     @Test
