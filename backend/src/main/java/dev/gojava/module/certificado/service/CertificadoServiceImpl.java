@@ -10,6 +10,7 @@ import dev.gojava.module.certificado.command.ReaderCommand;
 import dev.gojava.module.certificado.dto.CertificadoGeradoDTO;
 import dev.gojava.module.certificado.model.Certificate;
 import dev.gojava.module.certificado.model.Participant;
+import dev.gojava.module.certificado.repository.CertificadoRepository;
 import dev.gojava.module.certificado.service.exporter.CertificateExporter;
 import dev.gojava.module.certificado.service.generator.CertificateGenerator;
 import dev.gojava.module.certificado.service.reader.ParticipantsReader;
@@ -18,6 +19,7 @@ import org.slf4j.Logger;
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Default;
 import javax.inject.Inject;
+import javax.transaction.Transactional;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -41,8 +43,11 @@ public class CertificadoServiceImpl implements CertificadoService {
     CertificateGenerator generator;
     @Inject
     CertificateExporter exporter;
+    @Inject
+    CertificadoRepository repository;
 
 
+    @Transactional
     @Override
     public CertificadoGeradoDTO criarListaCertificado(CertificadoCommand command) {
         logger.info("Iniciando geração de certificado para: {}", command);
@@ -76,7 +81,7 @@ public class CertificadoServiceImpl implements CertificadoService {
 
     private void salvarCertificadosNoBancoOrThrow(List<Certificate> certificates) {
         logger.info("Salvando {} certificados no banco", certificates.size());
-        // todo adicionar panache e salvar dados
+        repository.persist(certificates);
         logger.info("Certificados salvos no banco");
     }
 }
