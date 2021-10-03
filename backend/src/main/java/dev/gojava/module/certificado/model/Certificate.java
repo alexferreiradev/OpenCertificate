@@ -1,6 +1,7 @@
 package dev.gojava.module.certificado.model;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -19,7 +20,7 @@ public class Certificate extends BaseModel {
     private String fileExtension;
     private String uuid;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(nullable = false)
     private Participant participant;
     private byte[] fileContent;
