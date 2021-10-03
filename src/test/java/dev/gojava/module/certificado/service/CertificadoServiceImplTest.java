@@ -6,6 +6,7 @@ import dev.gojava.module.certificado.dto.CertificadoGeradoDTO;
 import dev.gojava.module.certificado.dto.GenerateCertForm;
 import dev.gojava.module.certificado.model.Certificate;
 import dev.gojava.module.certificado.model.Participant;
+import dev.gojava.module.certificado.repository.CertificadoRepository;
 import dev.gojava.module.certificado.service.exporter.CertificateExporter;
 import dev.gojava.module.certificado.service.generator.CertificateGenerator;
 import dev.gojava.module.certificado.service.reader.ParticipantsReader;
@@ -41,6 +42,8 @@ class CertificadoServiceImplTest {
     CertificateExporter exporter;
     @Mock
     Logger logger;
+    @Mock
+    CertificadoRepository repository;
 
     @InjectMocks
     CertificadoServiceImpl service;
@@ -69,6 +72,7 @@ class CertificadoServiceImplTest {
 
         MatcherAssert.assertThat(certificadoGeradoDTO.arquivoZIP.getName(), Matchers.endsWith(".zip"));
         MatcherAssert.assertThat(certificadoGeradoDTO.tamanhoZIP, CoreMatchers.is(0L));
+        Mockito.verify(repository).persist(listaFakeCertificados);
     }
 
     @Test
