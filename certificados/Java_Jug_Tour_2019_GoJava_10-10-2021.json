@@ -1,0 +1,19 @@
+{
+  "integrityKey": "",
+  "certificates": [
+    {
+      "token": "df6d8bc1a9cc2579fb1613f47aa3cd14b79f37591452bc5fda438854ef0b043b",
+      "participant": {
+        "identifier": "2112345",
+        "name": "Airon Teste 1"
+      }
+    },
+    {
+      "token": "ef092beb55df4afacd61c7bd5827b06f8738357551e5b0e2d64ea1ea8bd6712c",
+      "participant": {
+        "identifier": "12312356789",
+        "name": "Alex Teste 2"
+      }
+    }
+  ]
+}
