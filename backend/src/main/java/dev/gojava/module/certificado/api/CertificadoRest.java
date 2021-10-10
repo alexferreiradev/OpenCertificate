@@ -36,7 +36,7 @@ public class CertificadoRest implements CertificadoApi {
         CertificadoGeradoDTO certificadoGeradoDTO = service.criarListaCertificado(certificadoCommand);
         logger.info("Retorno da api com zip de tamanho: {}", certificadoGeradoDTO.tamanhoZIP);
 
-        return Response.ok(certificadoGeradoDTO).build();
+        return Response.ok(certificadoGeradoDTO).status(Response.Status.CREATED).build();
     }
 
 }
