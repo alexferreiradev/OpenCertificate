@@ -17,7 +17,9 @@ public class Participant extends BaseModel {
     private Long id;
     private String name;
     private String lastName;
+    @Column(length = 7)
     private String rg;
+    @Column(length = 11)
     private String cpf;
     private String hour;
 
