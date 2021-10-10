@@ -1,5 +1,7 @@
 package dev.gojava.module.certificado.model;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -23,7 +25,7 @@ public class Participant extends BaseModel {
     private String cpf;
     private String hour;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.PERSIST}, optional = false)
     @JoinColumn(nullable = false)
     private Event event;
 
