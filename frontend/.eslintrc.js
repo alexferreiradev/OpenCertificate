@@ -23,7 +23,7 @@ module.exports = {
         endOfLine: 'auto',
       },
     ],
-
+    'import/prefer-default-export': 'off',
     'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.js'] }],
   },
 };
