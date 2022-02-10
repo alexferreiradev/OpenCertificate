@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.5 (0.92.5+68)"
+   sodipodi:docname="telas.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.20849609"
+     inkscape:cx="-2130.6097"
+     inkscape:cy="639.55745"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1317"
+     inkscape:window-height="744"
+     inkscape:window-x="1969"
+     inkscape:window-y="548"
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="true"
+     showguides="false"
+     inkscape:guide-bbox="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-center="true"
+     inkscape:snap-object-midpoints="true">
+    <sodipodi:guide
+       position="-437.35623,183.58061"
+       orientation="0,1"
+       id="guide878"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="-437.35622,183.58061"
+       orientation="1,0"
+       id="guide880"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="layout"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <rect
+       style="opacity:0.98999999;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#808080;stroke-width:0.61806732;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect834"
+       width="270.31525"
+       height="189.88193"
+       x="-635.32654"
+       y="-103.55772"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-home.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="opacity:0.98999999;vector-effect:none;fill:#999999;fill-opacity:1;stroke:none;stroke-width:1.19879854;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect870"
+       width="270.11548"
+       height="50.152462"
+       x="-635.32648"
+       y="-103.55772"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-home.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       y="169.22897"
+       x="-812.99683"
+       height="189.88193"
+       width="270.31525"
+       id="rect900"
+       style="opacity:0.98999999;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#808080;stroke-width:0.61806732;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-validacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       y="169.22897"
+       x="-812.99677"
+       height="50.152462"
+       width="270.11548"
+       id="rect902"
+       style="opacity:0.98999999;vector-effect:none;fill:#999999;fill-opacity:1;stroke:none;stroke-width:1.19879854;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-validacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="opacity:0.98999999;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#808080;stroke-width:0.61806732;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect936"
+       width="270.31525"
+       height="189.88193"
+       x="-497.13861"
+       y="174.61292"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-importacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="opacity:0.98999999;vector-effect:none;fill:#999999;fill-opacity:1;stroke:none;stroke-width:1.19879854;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect938"
+       width="270.11548"
+       height="50.152462"
+       x="-497.13855"
+       y="174.61292"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-importacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#4d4d4d;stroke-width:0.25518477px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect1004"
+       width="214.91862"
+       height="109.48299"
+       x="-786.50964"
+       y="241.80983"
+       ry="3.140636"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-validacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       ry="3.140636"
+       y="245.39912"
+       x="-474.68936"
+       height="109.48299"
+       width="214.91862"
+       id="rect1063"
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#4d4d4d;stroke-width:0.25518477px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-importacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="components"
+     style="display:inline">
+    <rect
+       style="opacity:0.98999999;vector-effect:none;fill:#999999;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect876"
+       width="78.964561"
+       height="38.584953"
+       x="-605.69409"
+       y="-27.909227"
+       ry="8.5245838"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-home.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       ry="8.5245838"
+       y="-27.909227"
+       x="-474.86935"
+       height="38.584953"
+       width="78.964561"
+       id="rect882"
+       style="opacity:0.98999999;vector-effect:none;fill:#999999;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-home.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       id="g1002"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-validacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         transform="scale(1,-1)"
+         style="display:inline;opacity:1;vector-effect:none;fill:#b3b3b3;fill-opacity:1;stroke:#4d4d4d;stroke-width:0.24951814px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect983"
+         width="79.032715"
+         height="21.791471"
+         x="-724.53418"
+         y="-330.25113"
+         ry="4.358285" />
+    </g>
+    <g
+       id="g1067"
+       transform="matrix(1.0310867,0,0,1.9878887,341.90059,-318.65237)"
+       style="stroke:none"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-importacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         ry="1.4856112"
+         y="-330.25113"
+         x="-724.53418"
+         height="21.791471"
+         width="79.032715"
+         id="rect1065"
+         style="display:inline;opacity:1;vector-effect:none;fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:0.24951814px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+         transform="scale(1,-1)" />
+    </g>
+    <g
+       transform="matrix(0.51061304,0,0,0.51061304,55.596855,104.03354)"
+       id="g1071"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-importacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         transform="scale(1,-1)"
+         style="display:inline;opacity:1;vector-effect:none;fill:#b3b3b3;fill-opacity:1;stroke:#4d4d4d;stroke-width:0.24951814px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect1069"
+         width="79.032715"
+         height="21.791471"
+         x="-724.53418"
+         y="-330.25113"
+         ry="4.358285" />
+    </g>
+    <g
+       style="display:inline"
+       transform="matrix(0.71286415,0,0,1.0037086,83.94093,11.221913)"
+       id="g1075"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-importacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#4d4d4d;stroke-width:0.30454108px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect1073"
+         width="202.80849"
+         height="12.650127"
+         x="-773.4408"
+         y="247.84589"
+         ry="2.53002" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="text"
+     style="display:inline">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.60245228px;line-height:125%;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.45011491px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-620.35364"
+       y="-78.386314"
+       id="text840"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-home.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan838"
+         x="-620.35364"
+         y="-78.386314"
+         style="stroke-width:0.45011491px">Open Certificate</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-423.83249"
+       y="-76.132683"
+       id="text844"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-home.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         x="-423.83249"
+         y="-76.132683"
+         style="stroke-width:0.26458332px"
+         id="tspan846">GitHub</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-441.28128"
+       y="-82.953606"
+       id="text852"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-home.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan850"
+         x="-441.28128"
+         y="-82.953606"
+         style="stroke-width:0.26458332px">Seja um contribuidor</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.3499999px;line-height:125%;font-family:Umpush;-inkscape-font-specification:'Umpush, Bold';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:justify;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="-460.14987"
+       y="-6.3409219"
+       id="text856"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-home.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan854"
+         x="-460.14987"
+         y="-6.3409219"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.3499999px;line-height:125%;font-family:Umpush;-inkscape-font-specification:'Umpush, Bold';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:justify;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">Criar seu evento</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.3499999px;line-height:125%;font-family:Umpush;-inkscape-font-specification:'Umpush, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-598.54474"
+       y="-6.2897592"
+       id="text860"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-home.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         x="-598.54474"
+         y="-6.2897592"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.3499999px;font-family:Umpush;-inkscape-font-specification:'Umpush, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;stroke-width:0.26458332px"
+         id="tspan862">Validar seu certificado</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.41298199px;line-height:125%;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.67560852px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-532.70239"
+       y="-115.84822"
+       id="text868"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-home.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan866"
+         x="-532.70239"
+         y="-115.84822"
+         style="stroke-width:0.67560852px">Tela Home</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-504.26816"
+       y="-6.7202096"
+       id="text874"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-home.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan872"
+         x="-504.26816"
+         y="-6.7202096"
+         style="stroke-width:0.26458332px">OU</tspan></text>
+    <text
+       id="text910"
+       y="194.40036"
+       x="-798.02393"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.60245228px;line-height:125%;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.45011491px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-validacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         style="stroke-width:0.45011491px"
+         y="194.40036"
+         x="-798.02393"
+         id="tspan908"
+         sodipodi:role="line">Open Certificate</tspan></text>
+    <text
+       id="text914"
+       y="196.65399"
+       x="-601.50275"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-validacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         id="tspan912"
+         style="stroke-width:0.26458332px"
+         y="196.65399"
+         x="-601.50275"
+         sodipodi:role="line">GitHub</tspan></text>
+    <text
+       id="text918"
+       y="189.83307"
+       x="-618.95154"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-validacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         style="stroke-width:0.26458332px"
+         y="189.83307"
+         x="-618.95154"
+         id="tspan916"
+         sodipodi:role="line">Seja um contribuidor</tspan></text>
+    <text
+       id="text930"
+       y="156.93845"
+       x="-710.37268"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.41298199px;line-height:125%;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.67560852px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-validacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         style="stroke-width:0.67560852px"
+         y="156.93845"
+         x="-710.37268"
+         id="tspan928"
+         sodipodi:role="line">Tela Validação</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.60245228px;line-height:125%;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.45011491px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-482.16571"
+       y="199.7843"
+       id="text946"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-importacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan944"
+         x="-482.16571"
+         y="199.7843"
+         style="stroke-width:0.45011491px">Open Certificate</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-285.64447"
+       y="202.03793"
+       id="text950"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-importacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         x="-285.64447"
+         y="202.03793"
+         style="stroke-width:0.26458332px"
+         id="tspan948">GitHub</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-303.09329"
+       y="195.21701"
+       id="text954"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-importacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan952"
+         x="-303.09329"
+         y="195.21701"
+         style="stroke-width:0.26458332px">Seja um contribuidor</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.41298199px;line-height:125%;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.67560852px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-423.22882"
+       y="155.14378"
+       id="text966"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-importacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan964"
+         x="-423.22882"
+         y="155.14378"
+         style="stroke-width:0.67560852px">Tela Criação de evento</tspan></text>
+    <g
+       id="g993"
+       transform="matrix(0.95357769,0,0,1.0005589,-41.711094,9.856941)"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-validacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         ry="2.53002"
+         y="247.84589"
+         x="-773.4408"
+         height="12.650127"
+         width="202.80849"
+         id="rect980"
+         style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#4d4d4d;stroke-width:0.30454108px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    </g>
+    <text
+       id="text987"
+       y="321.48581"
+       x="-698.41577"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.3499999px;line-height:125%;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-validacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.3499999px;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;stroke-width:0.26458332px"
+         y="321.48581"
+         x="-698.41577"
+         id="tspan985"
+         sodipodi:role="line">VALIDAR</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-779.14136"
+       y="252.27765"
+       id="text974"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-validacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan972"
+         x="-779.14136"
+         y="252.27765"
+         style="stroke-width:0.26458332px">Código hash</tspan></text>
+    <text
+       transform="matrix(0.9535777,0,0,1.0005589,-41.711094,9.856941)"
+       id="text978"
+       y="255.64677"
+       x="-770.573"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.71701622px;line-height:125%;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:0.22111011px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-validacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         style="fill:#b3b3b3;stroke-width:0.22111011px"
+         y="255.64677"
+         x="-770.573"
+         id="tspan976"
+         sodipodi:role="line">Informe os 6 primeiros dígitos do código de validação que está no seu certificado.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-797.7215"
+       y="232.84129"
+       id="text997"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-validacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan995"
+         x="-797.7215"
+         y="232.84129"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332px">Validação de certificados</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.64914799px;line-height:125%;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#999999;fill-opacity:1;stroke:none;stroke-width:0.1710538px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-771.66571"
+       y="275.57727"
+       id="text1008"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-validacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan1006"
+         x="-771.66571"
+         y="275.57727"
+         style="fill:#999999;stroke-width:0.1710538px">Somente os 6 primeiros dígitos</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Bold';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:justify;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="-482.31192"
+       y="236.87926"
+       id="text1033"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-importacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan1031"
+         x="-482.31192"
+         y="236.87926"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Bold';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:justify;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">Criação de evento</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-468.53098"
+       y="254.92526"
+       id="text1037"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-importacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan1035"
+         x="-468.53098"
+         y="254.92526"
+         style="stroke-width:0.26458332px">Importação por CSV</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-463.74573"
+       y="267.77322"
+       id="text1041"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-importacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan1039"
+         x="-463.74573"
+         y="267.77322"
+         style="fill:#cccccc;stroke-width:0.26458332px">Informe o arquivo csv</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-364.38013"
+       y="311.02594"
+       id="text1045"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-importacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan1043"
+         x="-363.55881"
+         y="311.02594"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.26458332px">IMPORTAR </tspan><tspan
+         sodipodi:role="line"
+         x="-363.55881"
+         y="318.08148"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.26458332px"
+         id="tspan1083">e </tspan><tspan
+         sodipodi:role="line"
+         x="-364.38013"
+         y="325.13705"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.26458332px"
+         id="tspan1085">GERAR CERTIFICADOS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="-300.41321"
+       y="269.17773"
+       id="text1081"
+       inkscape:export-filename="/media/alexferreira/SSD/Documentos/Repositorios_git/OpenSources/OpenCertificate/frontend/.design/prototipo-v1/tela-importacao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan1079"
+         x="-300.41321"
+         y="269.17773"
+         style="stroke-width:0.26458332px;fill:#ffffff;">Abrir</tspan></text>
+  </g>
+</svg>
