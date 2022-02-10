@@ -19,7 +19,7 @@ import java.net.URISyntaxException;
 import static org.hamcrest.Matchers.equalTo;
 
 @QuarkusTest
-public class CertificadoRestRest {
+public class CertificadoRestIT {
 
     @InjectMock
     CertificadoService service;

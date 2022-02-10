@@ -11,5 +11,13 @@
               files=".*Repository.java"/>
     <suppress checks="MissingJavadocMethod"
               files=".*Builder.java"/>
+    <suppress checks="MissingJavadocType"
+              files=".*Builder.java"/>
+    <suppress checks="MissingJavadocType"
+              files=".*Mapper.java"/>
+    <suppress checks="MissingJavadocMethod"
+              files=".*Mapper.java"/>
+    <suppress checks="MissingJavadocMethod"
+              files=".*Command.java"/>
 
 </suppressions>
