@@ -35,7 +35,6 @@ public class CsvParticipantReader implements ParticipantsReader {
     private static final int EVENTTOPICS_CSV_INDEX = 6;
     private static final int EVENTDATESTARTED_CSV_INDEX = 7;
     private static final int EVENTDATEENDED_CSV_INDEX = 8;
-    private static final int CSV_DEFAULT_BUFFER = 128 * 1024;
 
     @Inject
     Logger logger;
@@ -65,12 +64,12 @@ public class CsvParticipantReader implements ParticipantsReader {
 
             return buildParticipantList(text);
         } catch (IndexOutOfBoundsException | IOException e) {
-            e.printStackTrace();
+            String msg = "CSV possívelmente antigo ou incompatível";
+            logger.error(msg, e);
+            throw new RestApplicationException(msg, e, Response.Status.BAD_REQUEST);
         } finally {
             StreamHelper.closeSafeInput(inputStream);
         }
-
-        return null;
     }
 
     private List<Participant> buildParticipantList(String text) {

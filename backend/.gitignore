@@ -39,4 +39,4 @@ nb-configuration.xml
 .env
 
 # Arquivos csv de teste
-*.csv
+/*.csv
