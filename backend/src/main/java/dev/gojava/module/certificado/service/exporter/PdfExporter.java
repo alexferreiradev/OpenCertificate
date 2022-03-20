@@ -74,12 +74,10 @@ public class PdfExporter implements CertificateExporter {
     private File exportPDF(Certificate certificate) {
         try {
             File file = Files.createTempFile("certificadoDraft_", CertificateUtil.createFileName(certificate)).toFile();
-            try (FileOutputStream fileOutputStream = new FileOutputStream(file)) {
-                createExportDirectory();
-                FileHelper.createFileOrThrow(file.getAbsolutePath(), true);
-
+            try (FileOutputStream fileOutputStream = new FileOutputStream(file, true)) {
                 fileOutputStream.write(certificate.getFileContent());
                 fileOutputStream.flush();
+                file.deleteOnExit();
 
                 return file;
             }
