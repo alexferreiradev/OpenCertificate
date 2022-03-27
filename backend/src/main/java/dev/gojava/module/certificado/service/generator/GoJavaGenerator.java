@@ -94,7 +94,7 @@ public class GoJavaGenerator implements CertificateGenerator {
             logger.debug("Criando arquivo PDF para participante: {}", certificate.getParticipant());
 
             File certificateTemp = File.createTempFile("certificateTemp_", ".pdf");
-            fileOutputStream = new FileOutputStream(certificateTemp);
+            fileOutputStream = new FileOutputStream(certificateTemp, true);
 
             document = new Document(PageSize.A4.rotate());
             PdfWriter writer = PdfWriter.getInstance(document, fileOutputStream);
