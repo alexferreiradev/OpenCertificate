@@ -1,4 +1,5 @@
 [![Java CI with Maven](https://github.com/alexferreiradev/OpenCertificate/actions/workflows/maven.yml/badge.svg)](https://github.com/alexferreiradev/OpenCertificate/actions/workflows/maven.yml)
+[![Frontend - Node.js CI](https://github.com/alexferreiradev/OpenCertificate/actions/workflows/node.js.yml/badge.svg)](https://github.com/alexferreiradev/OpenCertificate/actions/workflows/node.js.yml)
 
 # OpenCertificate
 Projeto para criar plataforma para gerar certificados online para comunidades.
