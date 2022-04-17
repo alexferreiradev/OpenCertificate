@@ -1,21 +1,23 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es6: true,
   },
-  extends: ['airbnb', 'prettier'],
+  extends: ['airbnb'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
   parserOptions: {
+    parser: 'babel-eslint',
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 12,
+    ecmaVersion: 2018,
     sourceType: 'module',
+    allowImportExportEverywhere: true,
   },
-  plugins: ['prettier', 'react'],
+  plugins: ['react', 'prettier'],
   rules: {
     // <!-- somente em dev -->
     // 'no-unused-expressions': 'warn', // <!-- somente em dev -->
@@ -29,7 +31,14 @@ module.exports = {
       },
     ],
     'no-console': ['error', { allow: ['error', 'warn', 'info'] }],
+    'no-restricted-exports': 'off',
+    'object-curly-newline': 'off',
+    'comma-dangle': 'off',
+    'import/no-named-as-default': 'off',
     'import/prefer-default-export': 'off',
+    'import/no-named-as-default-member': 'off',
     'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.js'] }],
+    'react/jsx-indent': 'off',
+    'react/jsx-one-expression-per-line': 'off',
   },
 };
