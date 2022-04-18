@@ -1,7 +1,9 @@
 import React from 'react';
 import { Button } from 'semantic-ui-react';
 import { useHistory } from 'react-router';
-import { Container, FullViewHeight, Body, Community, Footer } from './styles';
+
+import { Container, FullViewHeight, Body, Community } from './styles';
+
 import strings from './strings';
 
 function Home() {
@@ -64,16 +66,6 @@ function Home() {
           </ol>
         </Community>
       </FullViewHeight>
-      <Footer>
-        <h5>
-          Hospedado com ❤️ pelo{' '}
-          <a href="https://www.heroku.com/about">Heroku</a>
-        </h5>
-        <h5>
-          Mantido com ❤️ pela comunidade{' '}
-          <a href="https://www.gojava.dev">GO-JAVA</a>
-        </h5>
-      </Footer>
     </Container>
   );
 }
