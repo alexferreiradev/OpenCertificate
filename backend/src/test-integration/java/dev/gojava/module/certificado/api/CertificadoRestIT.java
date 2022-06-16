@@ -1,49 +1,33 @@
 package dev.gojava.module.certificado.api;
 
-import dev.gojava.module.certificado.dto.CertificadoGeradoDTO;
 import dev.gojava.module.certificado.dto.GenerateCertForm;
-import dev.gojava.module.certificado.service.CertificadoService;
 import dev.gojava.module.certificado.service.generator.GeneratorType;
+import dev.gojava.test.util.IntegrationTest;
 import io.quarkus.test.junit.QuarkusTest;
-import io.quarkus.test.junit.mockito.InjectMock;
-import org.hamcrest.MatcherAssert;
-import org.junit.jupiter.api.BeforeEach;
+import io.restassured.RestAssured;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 
-import javax.inject.Inject;
 import javax.ws.rs.core.Response;
 import java.io.File;
 import java.net.URISyntaxException;
 
-import static org.hamcrest.Matchers.equalTo;
 
 @QuarkusTest
-public class CertificadoRestIT {
-
-    @InjectMock
-    CertificadoService service;
-
-    CertificadoGeradoDTO dto;
-
-    @Inject
-    CertificadoRest rest;
-
-    @BeforeEach
-    void setUp() {
-        dto = new CertificadoGeradoDTO();
-        dto.arquivoZIP = new File("./");
-    }
+public class CertificadoRestIT extends IntegrationTest {
 
     @Test
-    public void returnOk() throws URISyntaxException {
-        Mockito.when(service.criarListaCertificado(Mockito.any())).thenReturn(dto);
+    void salvarListaCertificado() throws URISyntaxException {
+        GenerateCertForm generateForm = new GenerateCertForm();
+        generateForm.csvFile = new File(getClass().getResource("/api/certificado/csv-valid.csv").toURI());
+        generateForm.entityName = GeneratorType.GOJAVA.name();
 
-        GenerateCertForm form = new GenerateCertForm();
-        form.entityName = GeneratorType.GOJAVA.name();
-        form.csvFile = new File(getClass().getResource("/certificado-rest/csvOk.csv").toURI());
-        Response response = rest.salvarListaCertificado(form);
-
-        MatcherAssert.assertThat(response.getStatus(), equalTo(200));
+        // @formatter:off
+        RestAssured.given()
+                .when()
+                .multiPart("entityName", generateForm.entityName)
+                .multiPart("csv", generateForm.csvFile)
+                .post("/certificados")
+                .then()
+                .statusCode(Response.Status.CREATED.getStatusCode());
     }
 }
