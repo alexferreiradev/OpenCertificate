@@ -1,7 +1,5 @@
 package dev.gojava.module.certificado.api;
 
-import com.github.tomakehurst.wiremock.WireMockServer;
-import com.github.tomakehurst.wiremock.client.MappingBuilder;
 import com.github.tomakehurst.wiremock.client.WireMock;
 import dev.gojava.module.github.IssueResponse;
 import dev.gojava.module.github.api.GithubApiClient;
@@ -11,18 +9,11 @@ import io.quarkus.test.junit.QuarkusTest;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 import org.hamcrest.CoreMatchers;
 import org.hamcrest.MatcherAssert;
-import org.junit.Assert;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import javax.inject.Inject;
 import javax.ws.rs.core.MediaType;
-
 import java.io.IOException;
 import java.net.URISyntaxException;
-
-import static com.github.tomakehurst.wiremock.client.WireMock.aResponse;
-import static com.github.tomakehurst.wiremock.client.WireMock.urlEqualTo;
 
 @QuarkusTest
 public class WiremockTestExample extends IntegrationTest {
@@ -32,6 +23,15 @@ public class WiremockTestExample extends IntegrationTest {
 
     @Test
     void shouldReturnWiremockMockResponseWhenCallApi() throws IOException, URISyntaxException {
+        fakeServer.stubFor(
+                WireMock.get(WireMock.urlEqualTo("/v1/issues"))
+                        .willReturn(
+                                WireMock.aResponse()
+                                .withHeader("Content-Type", MediaType.APPLICATION_JSON)
+                                .withBody(IssueTemplate.issueValid())
+                        )
+        );
+
         IssueResponse issue = client.createIssue();
 
         MatcherAssert.assertThat(issue, CoreMatchers.notNullValue());
