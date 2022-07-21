@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:13-alpine
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: open-certificate
+    command: [ "postgres", "-c", "wal_level=logical" ]
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres -d postgres" ]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+volumes:
+  sqlserver: { }
+
+networks:
+  open-certificate:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.10.2.0/24
