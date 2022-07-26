@@ -20,6 +20,8 @@
     <check-style-plugin-version>3.1.2</check-style-plugin-version>
     <check-style.version>8.38</check-style.version>
     <org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
+    <flyway.user>postgress</flyway.user>
+    <flyway.password>postgress</flyway.password>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -141,6 +143,12 @@
       <version>1.17.3</version>
       <scope>test</scope>
     </dependency>
+<!--    Migrations -->
+    <dependency>
+      <groupId>org.flywaydb</groupId>
+      <artifactId>flyway-core</artifactId>
+      <version>9.0.2</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
@@ -216,6 +224,18 @@
             <version>${check-style.version}</version>
           </dependency>
         </dependencies>
+      </plugin>
+
+      <!--Plugin para migrations-->
+      <plugin>
+        <groupId>org.flywaydb</groupId>
+        <artifactId>flyway-maven-plugin</artifactId>
+        <version>9.0.2</version>
+        <configuration>
+          <url>jdbc:postgresql://localhost:5432/open-certificate</url>
+          <user>${flyway.user}</user>
+          <password>${flyway.password}</password>
+        </configuration>
       </plugin>
 
     <!-- Teste de Unit      -->
