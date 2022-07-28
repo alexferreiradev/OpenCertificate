@@ -1,3 +1,3 @@
 create table CERTIFICATE (
-    ID int not null,
+    ID int not null primary key
 );
