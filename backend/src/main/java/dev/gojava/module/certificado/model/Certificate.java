@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 import java.util.Arrays;
 import java.util.Objects;
 
@@ -24,6 +25,8 @@ public class Certificate extends BaseModel {
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.PERSIST}, optional = false)
     @JoinColumn(nullable = false)
     private Participant participant;
+
+    @Transient
     private byte[] fileContent;
 
     public Long getId() {
