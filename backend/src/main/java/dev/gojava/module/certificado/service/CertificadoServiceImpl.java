@@ -12,6 +12,7 @@ import dev.gojava.module.certificado.model.Certificate;
 import dev.gojava.module.certificado.model.Participant;
 import dev.gojava.module.certificado.repository.CertificadoRepository;
 import dev.gojava.module.certificado.service.exporter.CertificateExporter;
+import dev.gojava.module.certificado.service.exporter.storage.StorageExporter;
 import dev.gojava.module.certificado.service.generator.CertificateGenerator;
 import dev.gojava.module.certificado.service.reader.ParticipantsReader;
 import org.slf4j.Logger;
@@ -44,6 +45,8 @@ public class CertificadoServiceImpl implements CertificadoService {
     @Inject
     CertificateExporter exporter;
     @Inject
+    StorageExporter storageExporter;
+    @Inject
     CertificadoRepository repository;
 
 
@@ -58,6 +61,8 @@ public class CertificadoServiceImpl implements CertificadoService {
         List<Certificate> certificates = generator.generateCertificates(generatorCommand);
         salvarCertificadosNoBancoOrThrow(certificates);
         List<File> certPdfList = exporter.export(certificates);
+        storageExporter.export(certPdfList);
+        logger.info("Exported {} files to storage", certPdfList.size());
 
         CertificadoGeradoDTO dto = new CertificadoGeradoDTO();
         dto.arquivoZIP = createZipFileFromPdfList(certPdfList);
