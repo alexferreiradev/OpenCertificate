@@ -20,7 +20,7 @@ import java.util.List;
 @ApplicationScoped
 public class PdfExporter implements CertificateExporter {
 
-    private static final String CERT_DIR_NAME = "certificados";
+    private static final String CERT_DIR_NAME = "certificates";
 
     @Inject
     Logger logger;
