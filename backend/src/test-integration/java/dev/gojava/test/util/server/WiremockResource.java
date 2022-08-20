@@ -32,7 +32,7 @@ public class WiremockResource implements QuarkusTestResourceLifecycleManager {
             InjectableTest injectable = (InjectableTest) testInstance;
             injectable.injectWireMockServer(server);
         } else {
-            throw new RuntimeException("Erro ao tentar injetar wiremock server no test, não é uma classe injetável");
+            throw new RuntimeException("Error when try to inject wiremock server in the test, the class is not injectable");
         }
     }
 }

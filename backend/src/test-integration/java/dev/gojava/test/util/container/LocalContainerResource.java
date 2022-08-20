@@ -15,7 +15,7 @@ public class LocalContainerResource implements QuarkusTestResourceLifecycleManag
     @Override
     public Map<String, String> start() {
         Map<String, String> quarkusConfiguration = postgresContainer.createQuarkusConfiguration();
-        System.out.println("Config para postgres configurada: " + quarkusConfiguration);
+        System.out.println("Configuration replaced to postgres: " + quarkusConfiguration);
         return quarkusConfiguration;
     }
 

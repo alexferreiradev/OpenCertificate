@@ -16,9 +16,9 @@ import java.net.URISyntaxException;
 public class CertificadoRestSharedIT extends IntegrationTest {
 
     @Test
-    void salvarListaCertificado() throws URISyntaxException {
+    void shouldGenerateCertificateWhenRequestIsValid() throws URISyntaxException {
         GenerateCertForm generateForm = new GenerateCertForm();
-        generateForm.csvFile = new File(getClass().getResource("/api/certificado/csv-valid.csv").toURI());
+        generateForm.csvFile = new File(getClass().getResource("/api/certificate/csv-valid.csv").toURI());
         generateForm.entityName = GeneratorType.GOJAVA.name();
 
         // @formatter:off
@@ -26,15 +26,15 @@ public class CertificadoRestSharedIT extends IntegrationTest {
                 .when()
                 .multiPart("entityName", generateForm.entityName)
                 .multiPart("csv", generateForm.csvFile)
-                .post("/certificados")
+                .post("/certificates")
                 .then()
                 .statusCode(Response.Status.CREATED.getStatusCode());
     }
 
     @Test
-    void salvarListaCertificado1() throws URISyntaxException {
+    void shouldGenerateCertificateWhenRequestIsValid2() throws URISyntaxException {
         GenerateCertForm generateForm = new GenerateCertForm();
-        generateForm.csvFile = new File(getClass().getResource("/api/certificado/csv-valid.csv").toURI());
+        generateForm.csvFile = new File(getClass().getResource("/api/certificate/csv-valid.csv").toURI());
         generateForm.entityName = GeneratorType.GOJAVA.name();
 
         // @formatter:off
@@ -42,15 +42,15 @@ public class CertificadoRestSharedIT extends IntegrationTest {
                 .when()
                 .multiPart("entityName", generateForm.entityName)
                 .multiPart("csv", generateForm.csvFile)
-                .post("/certificados")
+                .post("/certificates")
                 .then()
                 .statusCode(Response.Status.CREATED.getStatusCode());
     }
 
     @Test
-    void salvarListaCertificado2() throws URISyntaxException {
+    void shouldGenerateCertificateWhenRequestIsValid3() throws URISyntaxException {
         GenerateCertForm generateForm = new GenerateCertForm();
-        generateForm.csvFile = new File(getClass().getResource("/api/certificado/csv-valid.csv").toURI());
+        generateForm.csvFile = new File(getClass().getResource("/api/certificate/csv-valid.csv").toURI());
         generateForm.entityName = GeneratorType.GOJAVA.name();
 
         // @formatter:off
@@ -58,15 +58,15 @@ public class CertificadoRestSharedIT extends IntegrationTest {
                 .when()
                 .multiPart("entityName", generateForm.entityName)
                 .multiPart("csv", generateForm.csvFile)
-                .post("/certificados")
+                .post("/certificates")
                 .then()
                 .statusCode(Response.Status.CREATED.getStatusCode());
     }
 
     @Test
-    void salvarListaCertificado3() throws URISyntaxException {
+    void shouldGenerateCertificateWhenRequestIsValid4() throws URISyntaxException {
         GenerateCertForm generateForm = new GenerateCertForm();
-        generateForm.csvFile = new File(getClass().getResource("/api/certificado/csv-valid.csv").toURI());
+        generateForm.csvFile = new File(getClass().getResource("/api/certificate/csv-valid.csv").toURI());
         generateForm.entityName = GeneratorType.GOJAVA.name();
 
         // @formatter:off
@@ -74,7 +74,7 @@ public class CertificadoRestSharedIT extends IntegrationTest {
                 .when()
                 .multiPart("entityName", generateForm.entityName)
                 .multiPart("csv", generateForm.csvFile)
-                .post("/certificados")
+                .post("/certificates")
                 .then()
                 .statusCode(Response.Status.CREATED.getStatusCode());
     }

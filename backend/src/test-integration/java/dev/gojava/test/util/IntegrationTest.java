@@ -9,7 +9,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 
 @Testcontainers
 @QuarkusTestResource(value = SharedContainerResource.class)
-@QuarkusTestResource(value = WiremockResource.class)
+@QuarkusTestResource(value = WiremockResource.class, restrictToAnnotatedClass = true)
 public abstract class IntegrationTest implements InjectableTest {
 
     protected WireMockServer fakeServer;

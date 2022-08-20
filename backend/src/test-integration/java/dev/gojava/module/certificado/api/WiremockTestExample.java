@@ -24,7 +24,7 @@ public class WiremockTestExample extends IntegrationTest {
     @Test
     void shouldReturnWiremockMockResponseWhenCallApi() throws IOException, URISyntaxException {
         fakeServer.stubFor(
-                WireMock.get(WireMock.urlEqualTo("/v1/issues"))
+                WireMock.get(WireMock.urlEqualTo("/v1/issue"))
                         .willReturn(
                                 WireMock.aResponse()
                                 .withHeader("Content-Type", MediaType.APPLICATION_JSON)
@@ -38,5 +38,9 @@ public class WiremockTestExample extends IntegrationTest {
         MatcherAssert.assertThat(issue.id, CoreMatchers.is("1"));
         MatcherAssert.assertThat(issue.assign, CoreMatchers.is("Alex R Ferreira"));
         MatcherAssert.assertThat(issue.title, CoreMatchers.is("Postar Apresentação no GitHub"));
+
+        fakeServer.verify(WireMock.getRequestedFor(
+                WireMock.urlEqualTo("/v1/issues")
+        ));
     }
 }

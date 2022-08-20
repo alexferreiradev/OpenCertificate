@@ -2,7 +2,6 @@ package dev.gojava.module.certificado.api.local;
 
 import dev.gojava.module.certificado.dto.GenerateCertForm;
 import dev.gojava.module.certificado.service.generator.GeneratorType;
-import dev.gojava.test.util.IntegrationTest;
 import dev.gojava.test.util.LocalContainerIntegrationTest;
 import io.quarkus.test.junit.QuarkusTest;
 import io.restassured.RestAssured;
@@ -17,9 +16,9 @@ import java.net.URISyntaxException;
 public class CertificadoRestLocalContainerIT extends LocalContainerIntegrationTest {
 
     @Test
-    void salvarListaCertificado() throws URISyntaxException {
+    void shouldGenerateCertificateWhenRequestIsValid() throws URISyntaxException {
         GenerateCertForm generateForm = new GenerateCertForm();
-        generateForm.csvFile = new File(getClass().getResource("/api/certificado/csv-valid.csv").toURI());
+        generateForm.csvFile = new File(getClass().getResource("/api/certificate/csv-valid.csv").toURI());
         generateForm.entityName = GeneratorType.GOJAVA.name();
 
         // @formatter:off
@@ -27,15 +26,15 @@ public class CertificadoRestLocalContainerIT extends LocalContainerIntegrationTe
                 .when()
                 .multiPart("entityName", generateForm.entityName)
                 .multiPart("csv", generateForm.csvFile)
-                .post("/certificados")
+                .post("/certificates")
                 .then()
                 .statusCode(Response.Status.CREATED.getStatusCode());
     }
 
     @Test
-    void salvarListaCertificado1() throws URISyntaxException {
+    void shouldGenerateCertificateWhenRequestIsValid2() throws URISyntaxException {
         GenerateCertForm generateForm = new GenerateCertForm();
-        generateForm.csvFile = new File(getClass().getResource("/api/certificado/csv-valid.csv").toURI());
+        generateForm.csvFile = new File(getClass().getResource("/api/certificate/csv-valid.csv").toURI());
         generateForm.entityName = GeneratorType.GOJAVA.name();
 
         // @formatter:off
@@ -43,15 +42,15 @@ public class CertificadoRestLocalContainerIT extends LocalContainerIntegrationTe
                 .when()
                 .multiPart("entityName", generateForm.entityName)
                 .multiPart("csv", generateForm.csvFile)
-                .post("/certificados")
+                .post("/certificates")
                 .then()
                 .statusCode(Response.Status.CREATED.getStatusCode());
     }
 
     @Test
-    void salvarListaCertificado2() throws URISyntaxException {
+    void shouldGenerateCertificateWhenRequestIsValid3() throws URISyntaxException {
         GenerateCertForm generateForm = new GenerateCertForm();
-        generateForm.csvFile = new File(getClass().getResource("/api/certificado/csv-valid.csv").toURI());
+        generateForm.csvFile = new File(getClass().getResource("/api/certificate/csv-valid.csv").toURI());
         generateForm.entityName = GeneratorType.GOJAVA.name();
 
         // @formatter:off
@@ -59,15 +58,15 @@ public class CertificadoRestLocalContainerIT extends LocalContainerIntegrationTe
                 .when()
                 .multiPart("entityName", generateForm.entityName)
                 .multiPart("csv", generateForm.csvFile)
-                .post("/certificados")
+                .post("/certificates")
                 .then()
                 .statusCode(Response.Status.CREATED.getStatusCode());
     }
 
     @Test
-    void salvarListaCertificado3() throws URISyntaxException {
+    void shouldGenerateCertificateWhenRequestIsValid4() throws URISyntaxException {
         GenerateCertForm generateForm = new GenerateCertForm();
-        generateForm.csvFile = new File(getClass().getResource("/api/certificado/csv-valid.csv").toURI());
+        generateForm.csvFile = new File(getClass().getResource("/api/certificate/csv-valid.csv").toURI());
         generateForm.entityName = GeneratorType.GOJAVA.name();
 
         // @formatter:off
@@ -75,7 +74,7 @@ public class CertificadoRestLocalContainerIT extends LocalContainerIntegrationTe
                 .when()
                 .multiPart("entityName", generateForm.entityName)
                 .multiPart("csv", generateForm.csvFile)
-                .post("/certificados")
+                .post("/certificates")
                 .then()
                 .statusCode(Response.Status.CREATED.getStatusCode());
     }
