@@ -4,7 +4,7 @@ import dev.gojava.module.certificado.command.CertificatorGeneratorCommand;
 import dev.gojava.module.certificado.model.Certificate;
 import dev.gojava.module.certificado.model.Event;
 import dev.gojava.module.certificado.model.Participant;
-import dev.gojava.module.certificado.service.generator.token.TokenGenerator;
+//import dev.gojava.module.certificado.service.generator.token.TokenGenerator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -26,8 +26,8 @@ class GoJavaGeneratorTest {
 
     @Spy
     Logger logger;
-    @Mock
-    TokenGenerator tokenGenerator;
+//    @Mock
+//    TokenGenerator tokenGenerator;
 
     @InjectMocks
     private GoJavaGenerator generator;
@@ -36,7 +36,7 @@ class GoJavaGeneratorTest {
     void setUp() {
         MockitoAnnotations.openMocks(this);
 
-        Mockito.when(tokenGenerator.generateToken(ArgumentMatchers.any(Certificate.class))).thenReturn("tokenSha256");
+//        Mockito.when(tokenGenerator.generateToken(ArgumentMatchers.any(Certificate.class))).thenReturn("tokenSha256");
     }
 
     @Test

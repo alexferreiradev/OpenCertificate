@@ -20,7 +20,7 @@ import dev.gojava.core.util.ParticipantUtil;
 import dev.gojava.module.certificado.command.CertificatorGeneratorCommand;
 import dev.gojava.module.certificado.model.Certificate;
 import dev.gojava.module.certificado.model.Participant;
-import dev.gojava.module.certificado.service.generator.token.TokenGenerator;
+//import dev.gojava.module.certificado.service.generator.token.TokenGenerator;
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 
@@ -45,8 +45,8 @@ public class GoJavaGenerator implements CertificateGenerator {
     @Inject
     Logger logger;
 
-    @Inject
-    TokenGenerator tokenGenerator;
+//    @Inject
+//    TokenGenerator tokenGenerator;
 
     @Override
     public List<Certificate> generateCertificates(CertificatorGeneratorCommand command) {
@@ -76,7 +76,7 @@ public class GoJavaGenerator implements CertificateGenerator {
 
             certificate.setFileName(createCertName(participant));
             certificate.setFileExtension("pdf");
-            certificate.setUuid(tokenGenerator.generateToken(certificate));
+//            certificate.setUuid(tokenGenerator.generateToken(certificate));
             certificate.setFileContent(buildPdfFileContent(certificate, command));
 
             return certificate;
@@ -110,7 +110,6 @@ public class GoJavaGenerator implements CertificateGenerator {
 
             addBackgroundImage(writer.getDirectContentUnder(), command);
 
-            document.close();
             certificateTemp.deleteOnExit();
 
             return FileUtils.readFileToByteArray(certificateTemp);
@@ -194,7 +193,7 @@ public class GoJavaGenerator implements CertificateGenerator {
         }
 
         finalText = finalText.replaceAll("ASSUNTO_EVENTO", participant.getEvent().getTalkerTopics());
-        finalText = finalText.replaceAll("VALIDATOR_UUID", certificate.getUuid());
+//        finalText = finalText.replaceAll("VALIDATOR_UUID", certificate.getUuid());
 
         return finalText;
     }

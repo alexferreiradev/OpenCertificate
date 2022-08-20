@@ -16,7 +16,7 @@ import dev.gojava.module.certificado.command.CertificatorGeneratorCommand;
 import dev.gojava.module.certificado.exception.LargeNameException;
 import dev.gojava.module.certificado.model.Certificate;
 import dev.gojava.module.certificado.model.Participant;
-import dev.gojava.module.certificado.service.generator.token.TokenGenerator;
+//import dev.gojava.module.certificado.service.generator.token.TokenGenerator;
 import org.apache.commons.io.FileUtils;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -36,8 +36,8 @@ public class NasaHackGenerator implements CertificateGenerator {
 
     private static final int MAX_NAME_CHARS = 29;
 
-    @Inject
-    TokenGenerator tokenGenerator;
+//    @Inject
+//    TokenGenerator tokenGenerator;
 
 
     @Override
@@ -54,7 +54,7 @@ public class NasaHackGenerator implements CertificateGenerator {
             participantNamePath = participantNamePath.replaceAll("[^\\w]", "-");
             certificate.setFileName("certificado_" + participantNamePath);
             certificate.setFileExtension("pdf");
-            certificate.setUuid(tokenGenerator.generateToken(certificate));
+//            certificate.setUuid(tokenGenerator.generateToken(certificate));
             try {
                 certificate.setFileContent(buildPdfFileContent(certificate, command));
             } catch (LargeNameException e) {
