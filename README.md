@@ -61,3 +61,7 @@ DATASOURCE_USERNAME=
 DATASOURCE_PASSWORD=
 DATASOURCE_URL=
 ```
+
+## Deploying in STG
+
+Mais detalhes de como fazer deploy em STG e PRD podem ser vistos por [aqui](./deploy-README.md).
