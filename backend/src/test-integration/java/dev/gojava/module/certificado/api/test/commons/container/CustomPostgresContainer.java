@@ -10,13 +10,13 @@ public class CustomPostgresContainer<SELF extends PostgreSQLContainer<SELF>> ext
 
     public CustomPostgresContainer() {
         super(DockerImageName.parse("postgres:13-alpine").asCompatibleSubstituteFor("postgres"));
+        withUsername("postgres");
+        withPassword("postgres");
+        withDatabaseName("open-certificate");
 
         start();
 
-        Flyway.configure()
-                .dataSource(getJdbcUrl(), getUsername(), getPassword())
-                .load()
-                .migrate();
+        Flyway.configure().dataSource(getJdbcUrl(), getUsername(), getPassword()).load().migrate();
     }
 
     @Override
