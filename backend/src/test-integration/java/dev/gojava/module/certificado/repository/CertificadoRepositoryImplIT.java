@@ -6,10 +6,12 @@ import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Test;
 
 import javax.inject.Inject;
+import javax.transaction.Transactional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @QuarkusTest
+@Transactional
 class CertificadoRepositoryImplIT extends IntegrationTest {
 
     @Inject
