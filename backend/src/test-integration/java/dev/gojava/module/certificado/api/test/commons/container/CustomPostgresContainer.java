@@ -6,13 +6,15 @@ import org.testcontainers.utility.DockerImageName;
 
 import java.util.Map;
 
-public class CustomPostgresContainer<SELF extends PostgreSQLContainer<SELF>> extends PostgreSQLContainer<SELF> implements InjectedContainer {
+public class CustomPostgresContainer extends PostgreSQLContainer<CustomPostgresContainer> implements InjectedContainer {
 
     public CustomPostgresContainer() {
         super(DockerImageName.parse("postgres:13-alpine").asCompatibleSubstituteFor("postgres"));
         withUsername("postgres");
         withPassword("postgres");
         withDatabaseName("open-certificate");
+        withExposedPorts(5432);
+        withExposedPorts(5432);
 
         start();
 
@@ -21,6 +23,6 @@ public class CustomPostgresContainer<SELF extends PostgreSQLContainer<SELF>> ext
 
     @Override
     public Map<String, String> configureProperties() {
-        return Map.of("jdbcUrl", getJdbcUrl());
+        return Map.of("%test.quarkus.datasource.jdbc.url", getJdbcUrl());
     }
 }
