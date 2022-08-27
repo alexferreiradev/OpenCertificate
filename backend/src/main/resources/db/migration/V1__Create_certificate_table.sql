@@ -1,8 +1,10 @@
+create sequence hibernate_sequence start 1;
+
 create table event (
     id             SERIAL not null primary key,
     name             varchar(255) not null,
     executor             varchar(255) not null,
-    talkerTopics           varchar(255) not null,
+    talker_topics           varchar(255) not null,
     date_started          timestamp not null,
     date_ended             timestamp not null
 );
@@ -11,7 +13,7 @@ create table participant
 (
     id             SERIAL not null primary key,
     name             varchar(255) not null,
-    lastName             varchar(255) not null,
+    last_name             varchar(255) not null,
     rg           varchar(255) not null,
     cpf          varchar(255) not null,
     hour             varchar(255) not null,
