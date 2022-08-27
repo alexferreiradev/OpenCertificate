@@ -1,9 +1,16 @@
 package dev.gojava.module.certificado.model;
 
+import org.apache.commons.beanutils.converters.DateConverter;
+
+import javax.persistence.Column;
+import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import java.time.Instant;
 import java.util.Date;
 import java.util.Objects;
 
@@ -13,10 +20,17 @@ public class Event extends BaseModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @Column
     private String name;
+    @Column
     private String executor;
+    @Column
     private String talkerTopics;
+    @Column
+    @Temporal(TemporalType.TIMESTAMP)
     private Date dateStarted;
+    @Column
+    @Temporal(TemporalType.TIMESTAMP)
     private Date dateEnded;
 
     public Long getId() {
