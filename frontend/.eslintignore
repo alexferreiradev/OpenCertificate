@@ -1,1 +1,3 @@
 src/reportWebVitals*.js
+src/setupTests.js
+**/*.test.js
