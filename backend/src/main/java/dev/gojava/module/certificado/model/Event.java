@@ -24,12 +24,12 @@ public class Event extends BaseModel {
     private String name;
     @Column
     private String executor;
-    @Column
+    @Column(name = "talker_topics")
     private String talkerTopics;
-    @Column
+    @Column(name = "date_started")
     @Temporal(TemporalType.TIMESTAMP)
     private Date dateStarted;
-    @Column
+    @Column(name = "date_ended")
     @Temporal(TemporalType.TIMESTAMP)
     private Date dateEnded;
 
