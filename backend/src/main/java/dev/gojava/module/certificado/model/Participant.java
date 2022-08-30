@@ -18,6 +18,7 @@ public class Participant extends BaseModel {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
+    @Column(name = "last_name")
     private String lastName;
     @Column(length = 7)
     private String rg;

@@ -1,6 +1,7 @@
 package dev.gojava.module.certificado.model;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -18,7 +19,9 @@ public class Certificate extends BaseModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @Column(name = "file_name", nullable = false)
     private String fileName;
+    @Column(name = "file_extension", nullable = false)
     private String fileExtension;
     private String uuid;
 
