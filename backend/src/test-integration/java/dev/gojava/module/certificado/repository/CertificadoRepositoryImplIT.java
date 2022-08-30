@@ -43,6 +43,7 @@ class CertificadoRepositoryImplIT extends IntegrationTest {
 
         entity.setParticipant(participant);
         entity.setFileName("teste");
+        entity.setFileExtension("pdf");
         entity.setUuid("teste");
         repository.persist(entity);
 
