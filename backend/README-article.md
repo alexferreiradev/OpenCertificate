@@ -135,15 +135,18 @@ temp tcdb
                                 202
                                 400
             TDD
-                ajustar migrations com tdd
-                    erro
-                        done
-                            nao roda flyway
-                                ajustar flyway fora do teste de integracao
-                        Hibernate
-                            nao coloca snake case em colunas
-                                ERROR: column "dateended" of relation "event" does not exist
-                                    Posição: 20
+                done
+                    ajustar migrations com tdd
+                        erro
+                            done
+                                nao roda flyway
+                                    ajustar flyway fora do teste de integracao
+                                Hibernate
+                                    nao coloca snake case em colunas
+                                        ERROR: column "dateended" of relation "event" does not exist
+                                            Posição: 20
+                                        solucao
+                                            usar @Column para declarar colunas com snake case
                 ajustar api
             melhorias
                 assert
@@ -170,3 +173,4 @@ temp tcdb
             plan code
             plan the conclusion
             plan cronograma
+
