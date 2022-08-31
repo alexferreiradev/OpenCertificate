@@ -17,7 +17,7 @@ public class CertificadoRestIT extends IntegrationTest {
     public void shouldReturn200_whenInputIsValid() throws URISyntaxException {
         GenerateCertForm form = new GenerateCertForm();
         form.entityName = GeneratorType.GOJAVA.name();
-        form.csvFile = new File(getClass().getResource("/certificado-rest/csvOk.csv").toURI());
+        form.csvFile = new File(getClass().getResource("/certificado-rest/event-sample.csv").toURI());
 
         // @formatter:off
         RestAssured.given()
