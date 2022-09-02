@@ -14,8 +14,8 @@ create table participant
     id             SERIAL not null primary key,
     name             varchar(255) not null,
     last_name             varchar(255) not null,
-    rg           varchar(255) not null,
-    cpf          varchar(255) not null,
+    rg           varchar(255),
+    cpf          varchar(255),
     hour             varchar(255) not null,
     event_id             int not null
 );
