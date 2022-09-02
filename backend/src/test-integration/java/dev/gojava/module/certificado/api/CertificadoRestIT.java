@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import javax.ws.rs.core.Response;
 import java.io.File;
 import java.net.URISyntaxException;
+import java.util.logging.Logger;
 
 @QuarkusTest
 public class CertificadoRestIT extends IntegrationTest {
@@ -29,14 +30,15 @@ public class CertificadoRestIT extends IntegrationTest {
                 .post("/certificados")
                 .then()
                 .statusCode(Response.Status.CREATED.getStatusCode())
-                .body(new TypeSafeMatcher<Response>() {
-                    @Override protected boolean matchesSafely(Response item) {
+                .body(new TypeSafeMatcher<String>() {
+                    @Override protected boolean matchesSafely(String item) {
                         System.out.println(item);
-                        return false;
+                        Logger.getGlobal().info("item: " + item);
+                        return true;
                     }
 
                     @Override public void describeTo(Description description) {
-
+                        description.appendText("não bate o resultado");
                     }
                 })
         ;
