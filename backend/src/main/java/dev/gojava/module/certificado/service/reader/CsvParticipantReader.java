@@ -78,6 +78,7 @@ public class CsvParticipantReader implements ParticipantsReader {
         while (stringTokenizer.hasMoreTokens()) {
             String line = stringTokenizer.nextToken();
             Participant participant = buildParticipant(line);
+            participant.throwIfIsInvalid();
 
             participantList.add(participant);
         }
