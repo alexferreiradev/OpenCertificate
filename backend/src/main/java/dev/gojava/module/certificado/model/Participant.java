@@ -105,4 +105,8 @@ public class Participant extends BaseModel {
         return "Participant{" + "id=" + id + ", name='" + name + '\'' + ", lastName='" + lastName + '\'' + ", rg='" + rg + '\'' + ", cpf='" + cpf + '\'' + ", hour='" + hour + '\''
                 + ", event=" + event + '}';
     }
+
+    public void throwIfIsInvalid() {
+        if (rg == null && cpf == null) throw new IllegalStateException("participant need to have rg or cpf");
+    }
 }
