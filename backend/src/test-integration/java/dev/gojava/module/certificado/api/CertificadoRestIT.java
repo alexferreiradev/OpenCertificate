@@ -4,6 +4,8 @@ import dev.gojava.module.certificado.dto.GenerateCertForm;
 import dev.gojava.module.certificado.service.generator.GeneratorType;
 import io.quarkus.test.junit.QuarkusTest;
 import io.restassured.RestAssured;
+import org.hamcrest.Description;
+import org.hamcrest.TypeSafeMatcher;
 import org.junit.jupiter.api.Test;
 
 import javax.ws.rs.core.Response;
@@ -26,7 +28,18 @@ public class CertificadoRestIT extends IntegrationTest {
                 .multiPart("csv", form.csvFile)
                 .post("/certificados")
                 .then()
-                .statusCode(Response.Status.CREATED.getStatusCode());
+                .statusCode(Response.Status.CREATED.getStatusCode())
+                .body(new TypeSafeMatcher<Response>() {
+                    @Override protected boolean matchesSafely(Response item) {
+                        System.out.println(item);
+                        return false;
+                    }
+
+                    @Override public void describeTo(Description description) {
+
+                    }
+                })
+        ;
     }
 
     @Test
