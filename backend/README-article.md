@@ -152,6 +152,11 @@ temp tcdb
                         alterar migration 
                             remover not null
                                 deixar somente no dominio a regra
+                ajustar test in maven
+                    tentar 3 dias
+                        1 dia
+                        2 dia
+                        3 dia
             melhorias
                 assert
                     return zip file
@@ -177,3 +182,4 @@ temp tcdb
             plan code
             plan the conclusion
             plan cronograma
+
