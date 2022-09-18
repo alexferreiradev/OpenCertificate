@@ -4,7 +4,6 @@ import dev.gojava.module.certificado.api.test.commons.container.CustomPostgresCo
 import io.quarkus.test.common.QuarkusTestResourceLifecycleManager;
 import org.testcontainers.junit.jupiter.Container;
 
-import javax.annotation.Resource;
 import java.util.Map;
 
 public class SharedContainerResource implements QuarkusTestResourceLifecycleManager {
