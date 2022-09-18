@@ -25,8 +25,9 @@ test('should service return error when api return error', async () => {
   const input = { file: 'file'};
   try {
     await certificateApi.importCertificate(input)
-  } catch (error) {
-    expect(error.message).toBe("Erro ao tentar importar evento");
+  } catch (errorCatched) {
+    expect(errorCatched.message).toBe("Erro no serviço ao tentar importar certificados");
+    // expect(errorCatched.cause).toEqual(error);
   }
-  expect(console.error).toBeCalledWith("Erro ao tentar importar certificados", error);
+  expect(console.error).toBeCalledWith("Erro no serviço ao tentar importar certificados", error);
 });
