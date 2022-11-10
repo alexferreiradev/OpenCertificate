@@ -7,7 +7,6 @@ import io.restassured.RestAssured;
 import org.hamcrest.Description;
 import org.hamcrest.TypeSafeMatcher;
 import org.junit.jupiter.api.Test;
-import org.testcontainers.junit.jupiter.Testcontainers;
 
 import javax.ws.rs.core.Response;
 import java.io.File;
@@ -15,7 +14,7 @@ import java.net.URISyntaxException;
 import java.util.logging.Logger;
 
 @QuarkusTest
-public class CertificadoRestIT extends IntegrationTest {
+public class CertificadoRestIT2 extends IntegrationTest {
 
     @Test
     public void shouldReturn200_whenInputIsValid() throws URISyntaxException {

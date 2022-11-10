@@ -15,14 +15,12 @@ public class CustomPostgresContainer extends PostgreSQLContainer<CustomPostgresC
         withDatabaseName("open-certificate");
         withExposedPorts(5432);
         withExposedPorts(5432);
-
-        start();
-
-        Flyway.configure().dataSource(getJdbcUrl(), getUsername(), getPassword()).load().migrate();
     }
 
     @Override
     public Map<String, String> configureProperties() {
+        Flyway.configure().dataSource(getJdbcUrl(), getUsername(), getPassword()).load().migrate();
+
         return Map.of("%test.quarkus.datasource.jdbc.url", getJdbcUrl());
     }
 }
