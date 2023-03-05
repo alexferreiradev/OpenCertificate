@@ -1,0 +1,23 @@
+version: '2'
+services:
+  api:
+    build: ./
+    image: opencertificate
+    ports:
+      - "8080:8080"
+    depends_on:
+      - database
+      - storage
+    environment:
+      DATASOURCE_USERNAME: postgres
+      DATASOURCE_PASSWORD: postgres
+  database:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: open_certificate
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+  storage:
+    image: mcr.microsoft.com/azure-storage/azurite
