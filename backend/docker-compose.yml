@@ -4,13 +4,14 @@ services:
     build: ./
     image: opencertificate
     ports:
-      - "8080:8080"
+      - "8089:8080"
     depends_on:
       - database
       - storage
     environment:
       DATASOURCE_USERNAME: postgres
       DATASOURCE_PASSWORD: postgres
+      DATASOURCE_URL: jdbc:postgresql://database:5432/open_certificate
   database:
     image: postgres
     ports:

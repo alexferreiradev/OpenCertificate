@@ -85,11 +85,8 @@ class CertificadoServiceImplTest {
         Mockito.when(reader.createReaderCommandOrThrow(command.form.csvFile))
                 .thenThrow(new RestApplicationException("Não foi possível ler arquivo csv", null, Response.Status.BAD_REQUEST));
 
-        Assertions.assertThrows(RestApplicationException.class, () -> {
-            service.criarListaCertificado(command);
-
-            Mockito.verify(reader, Mockito.only()).createReaderCommandOrThrow(Mockito.any());
-        });
+        Assertions.assertThrows(RestApplicationException.class, () -> service.criarListaCertificado(command));
+        Mockito.verify(reader, Mockito.only()).createReaderCommandOrThrow(Mockito.any());
     }
 
     private File crieTempFile(String fileName) throws IOException {
