@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 
 import dev.gojava.module.certificado.model.Certificate;
+
 /**
  * Unit tests for {@link CertificateUtil}.
  *
