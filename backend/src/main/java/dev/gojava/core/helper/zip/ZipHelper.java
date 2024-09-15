@@ -42,20 +42,27 @@ public final class ZipHelper {
     public static void writeZipFrom(ZipOutputStream zipOut, List<File> fileList, int bufferLenght) throws ZipFileNotCreatedException {
         if (zipOut == null) throw new NullPointerException("Stream de zip nulo");
         if (fileList == null) throw new NullPointerException("Lista de certificados nula");
+        try {
+            for (File file : fileList) {
+                try {
+                    ZipEntry zipEntry = new ZipEntry(file.getName());
+                    zipOut.putNextEntry(zipEntry);
 
-        for (File file : fileList) {
-            try {
-                ZipEntry zipEntry = new ZipEntry(file.getName());
-                zipOut.putNextEntry(zipEntry);
-
-                FileInputStream fis = new FileInputStream(file);
-                BufferedInputStream bufferedInputStream = new BufferedInputStream(fis);
-                while (bufferedInputStream.available() > 0) {
-                    zipOut.write(bufferedInputStream.readNBytes(bufferLenght));
+                    FileInputStream fis = new FileInputStream(file);
+                    BufferedInputStream bufferedInputStream = new BufferedInputStream(fis);
+                    while (bufferedInputStream.available() > 0) {
+                        zipOut.write(bufferedInputStream.readNBytes(bufferLenght));
+                    }
+                } catch (IOException e) {
+                    throw new ZipFileNotCreatedException("Erro ao tentar escrever em arquivo zip");
+                } finally {
+                    zipOut.closeEntry();
                 }
-            } catch (IOException e) {
-                throw new ZipFileNotCreatedException("Erro ao tentar escrever em arquivo zip");
             }
+
+            zipOut.close();
+        } catch (IOException e) {
+            throw new ZipFileNotCreatedException(e);
         }
     }
 }
