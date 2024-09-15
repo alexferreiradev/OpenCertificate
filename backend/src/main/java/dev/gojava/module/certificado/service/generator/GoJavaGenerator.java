@@ -23,6 +23,7 @@ import dev.gojava.module.certificado.model.Participant;
 import dev.gojava.module.certificado.service.generator.token.TokenGenerator;
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
+import org.springframework.context.annotation.Primary;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Default;
@@ -38,7 +39,9 @@ import java.util.Date;
 import java.util.List;
 
 @ApplicationScoped
+@org.springframework.stereotype.Service
 @Default
+@Primary
 @CertificateGeneratorType(type = GeneratorType.GOJAVA)
 public class GoJavaGenerator implements CertificateGenerator {
 

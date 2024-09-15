@@ -18,6 +18,7 @@ import dev.gojava.module.certificado.model.Certificate;
 import dev.gojava.module.certificado.model.Participant;
 import dev.gojava.module.certificado.service.generator.token.TokenGenerator;
 import org.apache.commons.io.FileUtils;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Alternative;
@@ -30,7 +31,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @ApplicationScoped
+@org.springframework.stereotype.Service
 @Alternative
+@Qualifier("nasa")
 @CertificateGeneratorType(type = GeneratorType.NASAHACK)
 public class NasaHackGenerator implements CertificateGenerator {
 

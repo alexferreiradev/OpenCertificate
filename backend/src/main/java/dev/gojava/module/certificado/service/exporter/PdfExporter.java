@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @ApplicationScoped
+@org.springframework.stereotype.Service
 public class PdfExporter implements CertificateExporter {
 
     private static final String CERT_DIR_NAME = "certificados";

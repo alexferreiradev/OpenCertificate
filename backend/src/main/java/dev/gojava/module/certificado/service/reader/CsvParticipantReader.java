@@ -24,6 +24,7 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 @ApplicationScoped
+@org.springframework.stereotype.Service
 public class CsvParticipantReader implements ParticipantsReader {
 
     private static final int NAME_CSV_INDEX = 0;

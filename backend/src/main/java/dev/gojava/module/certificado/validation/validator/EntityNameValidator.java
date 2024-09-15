@@ -5,20 +5,23 @@ import dev.gojava.module.certificado.service.generator.CertificateGeneratorType;
 import dev.gojava.module.certificado.service.generator.GeneratorType;
 import dev.gojava.module.certificado.validation.EntityNameValid;
 import org.slf4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.inject.Instance;
 import javax.inject.Inject;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
+import java.util.List;
 
 @ApplicationScoped
+@org.springframework.stereotype.Service
 public class EntityNameValidator implements ConstraintValidator<EntityNameValid, String> {
 
     @Inject
     Logger logger;
     @Inject
-    Instance<CertificateGenerator> generators;
+    @Autowired
+    List<CertificateGenerator> generators;
 
     @Override
     public boolean isValid(String value, ConstraintValidatorContext context) {

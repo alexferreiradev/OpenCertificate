@@ -17,6 +17,7 @@ import java.util.Date;
 import java.util.List;
 
 @ApplicationScoped
+@org.springframework.stereotype.Service
 public class JsonMetadataGenerator implements MetadataGenerator {
 
     @Override

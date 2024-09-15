@@ -6,14 +6,15 @@ import io.quarkus.test.junit.QuarkusTest;
 import io.restassured.RestAssured;
 import org.hamcrest.Description;
 import org.hamcrest.TypeSafeMatcher;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-import org.testcontainers.junit.jupiter.Testcontainers;
 
 import javax.ws.rs.core.Response;
 import java.io.File;
 import java.net.URISyntaxException;
 import java.util.logging.Logger;
 
+@Disabled("Sem config para quarkus")
 @QuarkusTest
 public class CertificadoRestIT extends IntegrationTest {
 

@@ -10,6 +10,7 @@ import javax.enterprise.context.ApplicationScoped;
 import java.text.DateFormat;
 
 @ApplicationScoped
+@org.springframework.stereotype.Service
 public class TokenGenerator_SHA256 implements TokenGenerator {
 
     /**

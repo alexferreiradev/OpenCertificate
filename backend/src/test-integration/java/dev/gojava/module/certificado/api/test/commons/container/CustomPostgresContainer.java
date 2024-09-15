@@ -1,6 +1,7 @@
 package dev.gojava.module.certificado.api.test.commons.container;
 
 import org.flywaydb.core.Flyway;
+import org.springframework.test.context.DynamicPropertyRegistry;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.utility.DockerImageName;
 
@@ -22,5 +23,10 @@ public class CustomPostgresContainer extends PostgreSQLContainer<CustomPostgresC
         Flyway.configure().dataSource(getJdbcUrl(), getUsername(), getPassword()).load().migrate();
 
         return Map.of("%test.quarkus.datasource.jdbc.url", getJdbcUrl());
+    }
+
+    @Override
+    public void configure(DynamicPropertyRegistry registry) {
+        registry.add("spring.datasource.url", this::getJdbcUrl);
     }
 }
