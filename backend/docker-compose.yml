@@ -1,6 +1,16 @@
 version: "3.8"
 
 services:
+  api:
+    build:
+      context: ./
+      dockerfile: src/main/docker/Dockerfile-spring.jvm
+    ports:
+      - "8082:8080"
+    environment:
+      SPRING_DATASOURCE_URL: "jdbc:postgresql://postgres:5432/open-certificate"
+      LOGGING_LEVEL_ROOT: "DEBUG"
+
   postgres:
     image: postgres:13-alpine
     ports:
