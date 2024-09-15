@@ -14,4 +14,6 @@ public interface CertificadoService {
      * @return Zip com pdfs gerados
      */
     CertificadoGeradoDTO criarListaCertificado(CertificadoCommand command);
+
+    byte[] getZip(String filePath);
 }

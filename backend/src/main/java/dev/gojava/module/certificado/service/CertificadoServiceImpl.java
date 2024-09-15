@@ -15,6 +15,7 @@ import dev.gojava.module.certificado.service.exporter.CertificateExporter;
 import dev.gojava.module.certificado.service.generator.CertificateGenerator;
 import dev.gojava.module.certificado.service.reader.ParticipantsReader;
 import org.slf4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Default;
@@ -22,10 +23,13 @@ import javax.inject.Inject;
 import javax.transaction.Transactional;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.List;
 import java.util.zip.ZipOutputStream;
 
 @ApplicationScoped
+@org.springframework.stereotype.Service
 public class CertificadoServiceImpl implements CertificadoService {
 
     public static final String ARQUIVO_BACKGROUND_GOJAVA = "ArquivoGoJava.png";
@@ -40,6 +44,7 @@ public class CertificadoServiceImpl implements CertificadoService {
     ParticipantsReader reader;
     @Inject
     @Default
+    @Autowired
     CertificateGenerator generator;
     @Inject
     CertificateExporter exporter;
@@ -65,11 +70,21 @@ public class CertificadoServiceImpl implements CertificadoService {
         return dto;
     }
 
+    @Override
+    public byte[] getZip(String filePath) {
+        try {
+            return Files.readAllBytes(Path.of(filePath));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     private File createZipFileFromPdfList(List<File> certPdfList) {
         try {
             File tempFile = File.createTempFile(ZIP_FILE_PREFIX_NAME, ZIP_FILE_EXTENSION);
             ZipOutputStream zipOut = ZipHelper.createZipOutputstreamTo(tempFile.getAbsolutePath());
             ZipHelper.writeZipFrom(zipOut, certPdfList, PDF_ZIP_BUFFER_SIZE);
+            tempFile.deleteOnExit();
 
             return tempFile;
         } catch (ZipFileNotCreatedException | IOException e) {
